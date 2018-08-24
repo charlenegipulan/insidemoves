@@ -11,6 +11,7 @@ import {
 import LogInPage from '../LogInPage/LogInPage';
 import SignUpPage from '../SignUpPage/SignUpPage';
 import userService from '../../utils/userService';
+import NavBar from '../../components/NavBar/NavBar';
 
 class App extends Component {
   constructor(props) {
@@ -46,10 +47,12 @@ class App extends Component {
     return (
       <div>
         <Router>
-          <Switch>
-            <Route exact path="/" render={() => 
-              <LandingPage />
-            } />
+          <React.Fragment>
+             <NavBar user={this.state.user} />
+              <Switch>
+                <Route exact path="/" render={() => 
+                  <LandingPage />
+                } />
             <Route exact path="/shop" render={() =>
               <ShopPage />
             } />
@@ -60,10 +63,11 @@ class App extends Component {
             } />
             <Route exact path="/signup" render={(props) =>
               <SignUpPage 
-              {...props}
-              handleSignup={this.handleSignup}/>
+                {...props}
+                handleSignup={this.handleSignup}/>
             } />
           </Switch>
+          </React.Fragment>
         </Router>
       </div>
     );

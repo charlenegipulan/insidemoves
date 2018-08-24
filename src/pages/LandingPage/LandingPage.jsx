@@ -11,7 +11,6 @@ const LandingPage = (props) => {
         <div className="LandingPage">
             <header className="LandingPage-header">
                 <Header />
-                <NavBar />
             </header>
             <div>
                 <ShopButton />
