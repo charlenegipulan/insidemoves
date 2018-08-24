@@ -16,4 +16,4 @@ var orderSchema = new Schema({
     timestamps: true
 });
 
-module.exports = mongoose('Order', orderSchema);
+module.exports = mongoose.model('Order', orderSchema);

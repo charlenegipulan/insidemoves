@@ -14,7 +14,8 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// app.use('/api', require('./routes/api'));
+app.use(require('./config/auth'));
+app.use('/api/users', require('./routes/api/users'));
 
 app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
