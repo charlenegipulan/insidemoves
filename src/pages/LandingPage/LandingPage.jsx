@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './LandingPage.css';
 import Header from '../../components/Header/Header'
 import NavBar from '../../components/NavBar/NavBar'
+import ShopButton from '../../components/ShopButton/ShopButton'
 
 const LandingPage = (props) => {
     
@@ -12,6 +13,9 @@ const LandingPage = (props) => {
                 <Header />
                 <NavBar />
             </header>
+            <div>
+                <ShopButton />
+            </div>
         </div>
     )
 }
