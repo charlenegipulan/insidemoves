@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './LandingPage.css';
 import Header from '../../components/Header/Header'
-import NavBar from '../../components/NavBar/NavBar'
 import ShopButton from '../../components/ShopButton/ShopButton'
+import LandingBanner from '../../components/LandingBanner/LandingBanner';
 
 const LandingPage = (props) => {
     
@@ -13,6 +13,7 @@ const LandingPage = (props) => {
                 <Header />
             </header>
             <div>
+                <LandingBanner />
                 <ShopButton />
             </div>
         </div>

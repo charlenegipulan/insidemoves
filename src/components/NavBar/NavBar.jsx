@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 
+
 const NavBar = (props) => {
     let nav = props.user ? 
         <div>
@@ -16,8 +17,9 @@ const NavBar = (props) => {
     </div>;
 
     return(
-        <div className="NavBar">
+        <div className='NavBar'>
             {nav}
+             <span className='NavBar-checkout'><Link to='/checkout' className='NavBar-link'>🛒</Link></span>
         </div>
     );
 };

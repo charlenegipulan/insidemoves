@@ -12,12 +12,13 @@ import LogInPage from '../LogInPage/LogInPage';
 import SignUpPage from '../SignUpPage/SignUpPage';
 import userService from '../../utils/userService';
 import NavBar from '../../components/NavBar/NavBar';
+import Cart from '../../components/Cart/Cart'
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+        cart: []
     }
   }
 
@@ -34,6 +35,37 @@ class App extends Component {
 
   handleLogin = () => {
     this.setState({user: userService.getUser()});
+  }
+
+  handleAddItem = (product) => {
+    this.setState(prevState => {
+      let item = prevState.cart.find(item => item.product === product);
+      var newCart;
+      if (item) {
+        item.quantity++;
+        newCart = prevState.cart;
+      } else {
+        item = {
+          product,
+          quantity: 1
+        };
+        newCart = prevState.cart.concat(item);
+      }
+      return {cart: newCart};
+    });
+  }
+
+  handleRemoveItem = (product) => {
+    this.setState(prevState => {
+      var itemIdx = prevState.cart.findIndex(item => item.product === product);
+      var item = prevState.cart[itemIdx, 1];
+      if (item.quantity === 1) {
+        prevState.cart.splice(itemIdx, 1);
+      } else {
+        item.quantity--;
+      }
+      return prevState;
+    });
   }
 
   /*---------- Lifecycle Methods ----------*/
@@ -68,7 +100,12 @@ class App extends Component {
               <SignUpPage 
                 {...props}
                 handleSignup={this.handleSignup}/>
-            } />
+            } 
+            />
+            <Cart 
+              cart={this.state.cart} 
+              handleRemoveItem={this.handleRemoveItem}
+            />
           </Switch>
           </React.Fragment>
         </Router>
