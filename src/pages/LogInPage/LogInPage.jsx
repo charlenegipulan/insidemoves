@@ -11,7 +11,10 @@ const LogInPage = (props) => {
                 <NavBar />
             </header>
             <div>
-                <LoginForm />
+                <LoginForm 
+                    handleLogin={props.handleLogin}
+                    {...props}
+                />
             </div>
         </div>
     )

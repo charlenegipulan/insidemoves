@@ -48,7 +48,10 @@ class App extends Component {
       <div>
         <Router>
           <React.Fragment>
-             <NavBar user={this.state.user} />
+             <NavBar 
+                user={this.state.user} 
+                handleLogout={this.handleLogout}
+                />
               <Switch>
                 <Route exact path="/" render={() => 
                   <LandingPage />
