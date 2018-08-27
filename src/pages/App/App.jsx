@@ -12,7 +12,6 @@ import LogInPage from '../LogInPage/LogInPage';
 import SignUpPage from '../SignUpPage/SignUpPage';
 import userService from '../../utils/userService';
 import NavBar from '../../components/NavBar/NavBar';
-import Cart from '../../components/Cart/Cart'
 import NavBar2 from '../../components/NavBar2/NavBar2';
 import Header from '../../components/Header/Header'
 
@@ -88,14 +87,18 @@ class App extends Component {
               handleLogout={this.handleLogout}
             />
             <Header />
-            <NavBar2 />
-
+            <NavBar2 
+              cart={this.state.cart}
+              handleRemoveItem={this.handleRemoveItem}
+            />
             <Switch>
               <Route exact path="/" render={() => 
                 <LandingPage />
               } />
-            <Route exact path="/shop" render={() =>
+            <Route exact path="/shop" render={(props) =>
               <ShopPage 
+                {...props}
+                handleAddItem={this.handleAddItem}
               />
             } />
             <Route exact path="/login" render={(props) =>

@@ -6,11 +6,10 @@ const Cart = (props) => {
     // let total = props.cart.reduce((tot, item) => tot + parseFloat(item.product.price.replace('$', '')) * item.quantity, 0);
     return (
     <section className="Cart">
-        Cart Items
-        {/* <CartItems 
+        <CartItems
         cart={props.cart}
-        handleRemoveItem={props.handleRemoveItem} */}
-        {/* /> */}
+        handleRemoveItem={props.handleRemoveItem} 
+        />
         {/* <div>Total: {total} </div> */}
     </section>
     );

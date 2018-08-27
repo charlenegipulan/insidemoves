@@ -1,54 +1,75 @@
 const products = [
     {
         "sku": "56-N3GP",
-        "name": "Yeezy Boost",
-        "price": "405.80",
-        "description": "Duis mattis egestas metus."
+        "name": "Yeezy Boost 350 V2",
+        "price": "230.00",
+        "description": "Cream White",
+        "img": "https://i.imgur.com/Asa9LCi.png"
     }, {
         "sku": "67-AFD1",
-        "name": "Yeezy Boost 32",
-        "price": "139.25",
-        "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo."
+        "name": "Travis Scott X AIR FORCE 1",
+        "price": "245.00",
+        "description": "SAIL."
     }, {
         "sku": "W6-H03N",
-        "name": "Jordans 500",
-        "price": "493.94",
-        "description": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero."
+        "name": "Yeezy Boost 350 V2",
+        "price": "320.00",
+        "description": "Butter."
     }, {
         "sku": "Q4-EZY2",
-        "name": "Adidas 4556",
-        "price": "303.13",
-        "description": "Etiam vel augue."
+        "name": "Yeezy Boost 350 V2",
+        "price": "280.00",
+        "description": "Beluga 2.0."
     }, {
         "sku": "BI-ZC3V",
-        "name": "Crocs",
+        "name": "Air Jordan 4 Retro NRG",
         "price": "200.95",
-        "description": "Ut at dolor quis odio consequat varius. Integer ac leo. Pellentesque ultrices mattis odio."
-    }, {
-        "sku": "H7-91SI",
-        "name": "Mushroom - King Eryingii",
-        "price": "171.24",
-        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices."
+        "description": "Raptors."
     }, {
         "sku": "XL-LHS2",
-        "name": "Converse",
-        "price": "42.26",
-        "description": "Etiam pretium iaculis justo. In hac habitasse platea dictumst."
+        "name": "Air Force 1 Low '07 PRM",
+        "price": "130.00",
+        "description": "Just Do It."
     }, {
         "sku": "FW-B82L",
-        "name": "Shoes 5",
-        "price": "213.41",
-        "description": "Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci."
+        "name": "Yeezy Boost 350 V2",
+        "price": "320.00",
+        "description": "Zebra."
     }, {
         "sku": "PK-8L4P",
-        "name": "Kanye",
-        "price": "413.09",
-        "description": "Proin at turpis a pede posuere nonummy."
+        "name": "Sean Wotherspoon X Air Max 1/97",
+        "price": "485.00",
+        "description": "Vibrant Colors."
+    }, {
+        "sku": "PK-8L4P",
+        "name": "Yeezy Boost 350 V2",
+        "price": "450.00",
+        "description": "Bred."
+    }, {
+        "sku": "PK-8L4P",
+        "name": "Air Jordan 11 Retro",
+        "price": "285.00",
+        "description": "Win like '96."
+    }, {
+        "sku": "PK-8L4P",
+        "name": "Yeezy 500",
+        "price": "285.00",
+        "description": "Blush."
+    }, {
+        "sku": "PK-8L4P",
+        "name": "Air Max '97",
+        "price": "160.00",
+        "description": "University Red."
+    }, {
+        "sku": "PK-8L4P",
+        "name": "Air Jordan 3 Retro OG",
+        "price": "285.00",
+        "description": "Black Cement 2018."
     }, {
         "sku": "WH-JJV5",
-        "name": "Blue Shoes",
-        "price": "207.30",
-        "description": "Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius."
+        "name": "Travis Scott X Air Jordan 4 Retro",
+        "price": "285.00",
+        "description": "Cactus."
     }]
 
 module.exports = products;

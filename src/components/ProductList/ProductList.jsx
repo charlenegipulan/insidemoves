@@ -11,7 +11,10 @@ const ProductList = (props) => {
         <div className="ProductList-Products">
                 <ul> 
                     {props.products.map(p => 
-                    <Product product={p}
+                    <Product 
+                        key={p.sku}
+                        product={p} 
+                        handleAddItem={props.handleAddItem}
                     />
                 )}
                 </ul>
