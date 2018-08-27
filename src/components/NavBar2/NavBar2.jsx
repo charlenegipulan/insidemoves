@@ -8,7 +8,9 @@ const NavBar2 = (props) => {
     return(
         <div className='NavBar2'>
             <SearchBar /> <Link to='/checkout' className='NavBar-link'>Cart</Link>
-            <Cart cart={props.cart}/>
+            <Cart cart={props.cart}
+            handleRemoveItem={props.handleRemoveItem}
+            />
         </div>
     );
 };

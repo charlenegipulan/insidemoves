@@ -8,8 +8,13 @@ const CheckoutPage = (props) => {
         <div className="CheckoutPage">
             <header className="CheckoutPage-header">
                 <Header />
-                <Cart cart={props.cart}/>
             </header>
+
+            <div>
+                <Cart cart={props.cart}
+                    handleRemoveItem={props.handleRemoveItem}
+            />
+            </div>
         </div>
     )
 }
