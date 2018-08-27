@@ -2,10 +2,9 @@ import React from 'react';
 import './Product.css';
 
 const Product = (props) => {
-    return
+    return(
         <div>
             <article className="Product">
-                <img src={'https://i.imgur.com/JvkoiLZ.png'} />
                 <div>
                     <h3> {props.product.name} </h3>
                     <p> {props.product.description} </p>
@@ -17,7 +16,7 @@ const Product = (props) => {
                 </div>
             </article>
         </div>
-    
+    )
 }
 
 export default Product;

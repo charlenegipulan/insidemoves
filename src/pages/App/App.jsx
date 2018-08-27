@@ -13,12 +13,15 @@ import SignUpPage from '../SignUpPage/SignUpPage';
 import userService from '../../utils/userService';
 import NavBar from '../../components/NavBar/NavBar';
 import Cart from '../../components/Cart/Cart'
+import NavBar2 from '../../components/NavBar2/NavBar2';
+import Header from '../../components/Header/Header'
+
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        cart: []
+      cart: [],
     }
   }
 
@@ -80,16 +83,20 @@ class App extends Component {
       <div>
         <Router>
           <React.Fragment>
-             <NavBar 
-                user={this.state.user} 
-                handleLogout={this.handleLogout}
-                />
-              <Switch>
-                <Route exact path="/" render={() => 
-                  <LandingPage />
-                } />
+            <NavBar 
+              user={this.state.user} 
+              handleLogout={this.handleLogout}
+            />
+            <Header />
+            <NavBar2 />
+
+            <Switch>
+              <Route exact path="/" render={() => 
+                <LandingPage />
+              } />
             <Route exact path="/shop" render={() =>
-              <ShopPage />
+              <ShopPage 
+              />
             } />
             <Route exact path="/login" render={(props) =>
               <LogInPage 
@@ -101,10 +108,6 @@ class App extends Component {
                 {...props}
                 handleSignup={this.handleSignup}/>
             } 
-            />
-            <Cart 
-              cart={this.state.cart} 
-              handleRemoveItem={this.handleRemoveItem}
             />
           </Switch>
           </React.Fragment>

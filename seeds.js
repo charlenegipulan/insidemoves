@@ -1,12 +1,10 @@
 require('dotenv').config();
 require('./config/database');
 var Product = require('./models/product');
+var products = require('./products');
 
 Product.remove({}).then(() => {
-  Product.create([
-    {name: 'Jordans 500', description: 'cool kicks', price: 499.99, review: 'Hello 123'},
-    {name: 'Yeezy Boost', description: 'cool kicks', price: 599.99, review: 'HelloWorld123'},
-  ]).then(() => {
+  Product.create(products).then(() => {
     process.exit();
   });
-})
+}) 

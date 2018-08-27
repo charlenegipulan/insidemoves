@@ -2,7 +2,7 @@ import React from 'react';
 import './CartItems.css';
 import CartItem from '../CartItem/CartItem';
 
-export default (props) => (
+const CartItems = (props) => (
     <div className="CartItems">
         {props.cart.map(item => <CartItem 
             key={item.product.sku}
@@ -11,3 +11,5 @@ export default (props) => (
         />)}
     </div>
 );
+
+export default CartItems;
