@@ -3,10 +3,9 @@ import './CartItem.css';
 
 const CartItem = (props) => (
     <div className="CartItem">
-        <p>Qty: 
-            <button onClick={() => props.handleRemoveItem(props.item.product)}> - </button>
-            <span>{props.item.quantity} </span>&nbsp;{props.item.product.name} 
-        </p>
+            <p> {props.item.name}</p>
+            <p> {props.item.price}</p>
+            <button onClick={() => props.handleRemoveItem(props.item.product._id)}> - </button>
     </div>
 );
 

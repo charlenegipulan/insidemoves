@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ProductList from '../../components/ProductList/ProductList';
+import SidePanel from '../../components/SidePanel/SidePanel';
 import productsAPI from '../../utils/productsAPI';
+import './ShopPage.css';
 
 class ShopPage extends Component {
     constructor(props) {
@@ -20,12 +22,11 @@ class ShopPage extends Component {
     render() {
         return (
             <div className="ShopPage">
-                <div>
+                <SidePanel />
                     <ProductList 
                         products={this.state.products}
                         handleAddItem={this.props.handleAddItem}
                     />
-                </div>
             </div>
         )
     }

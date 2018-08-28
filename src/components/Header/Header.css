@@ -1,6 +1,7 @@
 .Header {
-    background-color: gray;
+    background-color: #333333;
     text-align: center;
-    height: 15vh;
-    margin: 10px;
+    color: white;
+    height: 5vh;
+    padding: 10px;
 }

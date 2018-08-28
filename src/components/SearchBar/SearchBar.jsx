@@ -1,14 +1,14 @@
 import React from 'react';
+import './SearchBar.css';
 
 const SearchBar = () => {
     return (
         <div className="SearchBar">
-            <form>
-                <label>
-                    <input type="text" name="name" />
-                </label>
-                <input type="submit" value="Search" />
-            </form>
+     <form>
+       <input
+         placeholder="search"
+       />
+     </form>
         </div>
     )
 }

@@ -1,10 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var productsCtrl = require('../../controllers/products');
+var ordersCtrl = require('../../controllers/orders');
 
 /*---------- Public Routes ----------*/
-router.get('/', productsCtrl.index);
-router.post('/checkout', productsCtrl.addProduct);
+router.get('/cart', ordersCtrl.getCart);
 
 /*---------- Protected Routes ----------*/
 

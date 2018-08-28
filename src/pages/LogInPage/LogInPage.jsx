@@ -6,10 +6,7 @@ import LoginForm from '../../components/LogInForm/LogInForm';
 const LogInPage = (props) => {
     return (
         <div className="LogInPage">
-            <header className="LogInPage-header">
-                <Header />
-                <NavBar />
-            </header>
+
             <div>
                 <LoginForm 
                     handleLogin={props.handleLogin}

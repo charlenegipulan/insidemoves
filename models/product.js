@@ -13,7 +13,9 @@ var productSchema = new Schema({
     description: String,
     price: { type: Number, default: 0},
     reviews: [reviewSchema],
-    size: Number
+    size: Number,
+    img: String,
+    sku: String
 });
 
 module.exports = mongoose.model('Product', productSchema);

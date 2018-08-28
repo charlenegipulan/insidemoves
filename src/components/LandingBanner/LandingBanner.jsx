@@ -7,7 +7,7 @@ const LandingBanner = (props) => {
 
     return(
         <div className='LandingBanner'>
-            <h1>This is the landing banner</h1>
+            <img src="https://i.imgur.com/hgkRgGY.png"/>
         </div>
     );
 };

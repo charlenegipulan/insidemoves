@@ -1,4 +1,28 @@
 .NavBar {
-    position: absolute;
-    right: 0;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+
+.NavBar a {
+    text-decoration: none;
+}
+
+.NavBar h3{
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.NavBar-login {
+    font-size: 10px;
+}
+
+.NavBar-link {
+    color: black;
+}
+
+.icons {
+    color: black;
 }

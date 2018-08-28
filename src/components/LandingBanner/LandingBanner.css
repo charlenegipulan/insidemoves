@@ -1,7 +1,9 @@
 .LandingBanner {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.LandingBanner img{
     width: 80%;
     height: 60vh;
-    margin: 0 auto;
-    background-color: lightgrey;
-    text-align: center;
 }

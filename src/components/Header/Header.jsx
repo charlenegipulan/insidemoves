@@ -5,7 +5,7 @@ import './Header.css';
 const Header = (props) => {
     return(
         <div className="Header">
-           <h1>Inside Moves </h1>
+           <p>Free Shipping on Orders Over $50. </p>
         </div>
     );
 }

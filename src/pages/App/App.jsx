@@ -10,17 +10,20 @@ import {
 } from 'react-router-dom'
 import LogInPage from '../LogInPage/LogInPage';
 import SignUpPage from '../SignUpPage/SignUpPage';
+import CheckoutPage from '../CheckoutPage/CheckoutPage';
 import userService from '../../utils/userService';
 import NavBar from '../../components/NavBar/NavBar';
 import NavBar2 from '../../components/NavBar2/NavBar2';
 import Header from '../../components/Header/Header'
-
+import productsAPI from '../../utils/productsAPI';
+import ordersAPI from '../../utils/ordersAPI';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cart: [],
+      user: {},
+      cart: null
     }
   }
 
@@ -39,22 +42,29 @@ class App extends Component {
     this.setState({user: userService.getUser()});
   }
 
-  handleAddItem = (product) => {
-    this.setState(prevState => {
-      let item = prevState.cart.find(item => item.product === product);
-      var newCart;
-      if (item) {
-        item.quantity++;
-        newCart = prevState.cart;
-      } else {
-        item = {
-          product,
-          quantity: 1
-        };
-        newCart = prevState.cart.concat(item);
-      }
-      return {cart: newCart};
-    });
+  // handleAddItem = (product) => {
+  //   this.setState(prevState => {
+  //     let item = prevState.cart.find(item => item.product === product);
+  //     var newCart;
+  //     if (item) {
+  //       item.quantity++;
+  //       newCart = prevState.cart;
+  //     } else {
+  //       item = {
+  //         product,
+  //         quantity: 1
+  //       };
+  //       newCart = prevState.cart.concat(item);
+  //     }
+  //     return {cart: newCart};
+  //   });
+  // }
+
+  handleAddItem = (productId) => {
+    productsAPI.addProduct(productId)
+    .then(cart => {
+      this.setState({ cart });
+    })
   }
 
   handleRemoveItem = (product) => {
@@ -74,7 +84,10 @@ class App extends Component {
 
   componentDidMount() {
     let user = userService.getUser();
-    this.setState({user});
+    this.setState({user}, function() {
+      ordersAPI.getCart()
+      .then(cart => this.setState({ cart }));
+    });
   }
 
   render() {
@@ -86,11 +99,11 @@ class App extends Component {
               user={this.state.user} 
               handleLogout={this.handleLogout}
             />
-            <Header />
             <NavBar2 
               cart={this.state.cart}
               handleRemoveItem={this.handleRemoveItem}
             />
+            <Header />
             <Switch>
               <Route exact path="/" render={() => 
                 <LandingPage />
@@ -111,6 +124,15 @@ class App extends Component {
                 {...props}
                 handleSignup={this.handleSignup}/>
             } 
+            
+            />
+            <Route exact path="/checkout" render={({ history }) =>
+              <CheckoutPage
+                user={this.state.user}
+                cart={this.state.cart}
+                history={history}
+            />} 
+            
             />
           </Switch>
           </React.Fragment>

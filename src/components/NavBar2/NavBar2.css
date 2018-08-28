@@ -1,7 +1,12 @@
 .NavBar2 {
-    background-color: lightgray;
-    padding: 10px;
     display: flex;
     flex-direction: row;
-    margin: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.NavBar2 div {
+    text-align: center;
+    width: 50%;
+    font-size: 10px;
 }
