@@ -5,8 +5,7 @@ const Product = (props) => {
     return(
         <div>
             <article className="Product">
-                <img src={props.product.img} alt={props.product.name} style={{width: 400, height:350}}/>
-                <div>
+                 <div>
                     <h3> {props.product.name} </h3>
                 </div>
                 <p> {props.product.description} </p>

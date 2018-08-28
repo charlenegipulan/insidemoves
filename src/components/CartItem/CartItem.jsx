@@ -3,8 +3,10 @@ import './CartItem.css';
 
 const CartItem = (props) => (
     <div className="CartItem">
-            <p> {props.item.name}</p>
-            <p> {props.item.price}</p>
+            <p> <img src={props.item.product.img} /></p>
+            <p> {props.item.product.name}</p>
+            <p> {props.item.product.price}</p>
+            <p> {props.item.quantity}</p>
             <button onClick={() => props.handleRemoveItem(props.item.product._id)}> - </button>
     </div>
 );
