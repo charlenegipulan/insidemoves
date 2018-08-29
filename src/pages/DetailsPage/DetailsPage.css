@@ -4,10 +4,26 @@
     justify-content: space-between;
 }
 
+.DetailsPage-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
 .DetailsPage-images {
     margin: 0 auto;
 }
 
 .DetailsPage-product-detail {
     margin: 0 auto;
+    margin-left: 10px;
+    padding-top: 20px;
+}
+
+.DetailsPage-product-detail button {
+    background-color: black;
+    color: white;
+    border: none;
+    width: 200px;
+    height: 50px;
 }

@@ -8,10 +8,10 @@ const DetailsPage = (props) => {
     var view;
     if (product) {
         view = <React.Fragment>
-            
+            <div className="DetailsPage-content">
             <div className="DetailsPage-images">
                 <div>
-                    <img src={product.img} alt={product.name} style={{width:350, height:250}}/>
+                    <img src={product.img} alt={product.name} style={{width:450, height:350}}/>
                 </div>
                 <div>
                     <img src={product.img2} style={{width:120, height:100}} />
@@ -23,10 +23,12 @@ const DetailsPage = (props) => {
             </div>
             <div className="DetailsPage-product-detail">
                 <h1>{product.name}</h1>
+                <hr/>
                 <p>{product.description}</p>
                 <p>{product.sku}</p>
                 <p>{product.price}</p>
                 <button onClick={() => props.handleAddItem(product._id)}> ADD TO CART </button>
+            </div>
             </div>
             </React.Fragment>
     } else {
