@@ -42,24 +42,6 @@ class App extends Component {
     this.setState({user: userService.getUser()});
   }
 
-  // handleAddItem = (product) => {
-  //   this.setState(prevState => {
-  //     let item = prevState.cart.find(item => item.product === product);
-  //     var newCart;
-  //     if (item) {
-  //       item.quantity++;
-  //       newCart = prevState.cart;
-  //     } else {
-  //       item = {
-  //         product,
-  //         quantity: 1
-  //       };
-  //       newCart = prevState.cart.concat(item);
-  //     }
-  //     return {cart: newCart};
-  //   });
-  // }
-
   handleAddItem = (productId) => {
     productsAPI.addProduct(productId)
     .then(cart => {

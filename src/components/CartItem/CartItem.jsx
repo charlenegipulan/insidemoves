@@ -1,7 +1,8 @@
 import React from 'react';
 import './CartItem.css';
 
-const CartItem = (props) => (
+const CartItem = (props) =>  {
+    return(
     <div className="CartItem">
             <p> <img src={props.item.product.img} /></p>
             <p> {props.item.product.name}</p>
@@ -9,6 +10,8 @@ const CartItem = (props) => (
             <p> {props.item.quantity}</p>
             <button onClick={() => props.handleRemoveItem(props.item.product._id)}> - </button>
     </div>
-);
+    )
+}
+
 
 export default CartItem;

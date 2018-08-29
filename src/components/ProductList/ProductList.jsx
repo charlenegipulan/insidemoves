@@ -5,7 +5,7 @@ import Product from '../../components/Product/Product'
 const ProductList = (props) => {
     return (
     <section className="ProductList">
-    <h2>Product List</h2>
+    <h2>All Products</h2>
     <hr />
         <div className="ProductList-Products">
             {props.products.map(p => 

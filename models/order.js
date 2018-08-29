@@ -25,7 +25,8 @@ orderSchema.methods.addProduct = function(productId, cb) {
         order.items.push({product: productId});
     }
     order.save().then(() => {
-        order.populate('items.product').execPopulate().then(() => cb(order));
+        order.populate('items.product').execPopulate().then(() => 
+        cb(order));
     });
 }
 

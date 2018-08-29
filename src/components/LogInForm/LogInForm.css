@@ -1,0 +1,16 @@
+.header-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.LogInForm a {
+    color: white;
+    background-color: #EF5656;
+    padding: 10px;
+}
+
+.LogInForm a:hover {
+    text-decoration: none;
+    color: #EF5656;
+    background-color: white;
+}

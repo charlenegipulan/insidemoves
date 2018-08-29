@@ -8,3 +8,8 @@
     text-align: center;
     padding: 10px;
 }
+
+.ShopButton a:hover {
+    text-decoration: none;
+    color: black;
+}

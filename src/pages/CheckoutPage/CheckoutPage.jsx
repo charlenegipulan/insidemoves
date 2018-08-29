@@ -1,8 +1,8 @@
 import React from 'react';
 import Cart from '../../components/Cart/Cart';
 import './CheckoutPage.css';
+
 const CheckoutPage = (props) => {
-    
     return (
         <div className="CheckoutPage">
             <div className="CheckoutPage-cart">

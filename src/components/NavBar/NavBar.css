@@ -11,8 +11,16 @@
     text-decoration: none;
 }
 
-.NavBar h3{
+.inside-text {
     font-family: 'Julius Sans One', sans-serif;
+    color: red;
+    font-size: 30px;
+}
+
+.moves-text {
+    font-family: 'Julius Sans One', sans-serif;
+    color: black;
+    font-size: 30px;
 }
 
 .NavBar-login {
@@ -25,4 +33,9 @@
 
 .icons {
     color: black;
+}
+
+.NavBar img {
+    width: 20px;
+    margin: 5px;
 }

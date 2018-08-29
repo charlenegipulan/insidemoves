@@ -12,7 +12,6 @@ class ShopPage extends Component {
         }
     }
 
-
     componentDidMount() {
         productsAPI.index().then(products => {
             this.setState({products})

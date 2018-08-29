@@ -2,87 +2,186 @@ const products = [
     {
         "sku": "56-N3GP",
         "name": "Yeezy Boost 350 V2",
+        "category": "shoes",
+        "brand": "Yeezy",
         "price": "230.00",
         "description": "Cream White",
-        "img": "https://i.imgur.com/OXMxoz8.png"
+        "img": "https://i.imgur.com/UsOKkYn.png",
+        "img2": "https://i.imgur.com/1Rfg9LN.png",
+        "img3": "https://i.imgur.com/E1vUSKG.png",
+        "img4": "https://i.imgur.com/hUoP8O5.png",
+        "img5": "https://i.imgur.com/PJ9QIDj.png",
+        "img6": "https://i.imgur.com/wP0GJA6.png"
     }, {
         "sku": "67-AFD1",
         "name": "Travis Scott X AIR FORCE 1",
+        "category": "shoes",
+        "brand": "Nike",
         "price": "245.00",
         "description": "SAIL.",
-        "img": "https://i.imgur.com/OXMxoz8.png"
+        "img": "https://i.imgur.com/azhUGOk.png",
+        "img2": "https://i.imgur.com/33Oxeci.png",
+        "img3": "https://i.imgur.com/lmUl951.png",
+        "img4": "https://i.imgur.com/msM4PLx.png",
+        "img5": "https://i.imgur.com/X63I4Gr.png",
+        "img6": "https://i.imgur.com/gLwFKZI.png"
     }, {
         "sku": "W6-H03N",
         "name": "Yeezy Boost 350 V2",
+        "category": "shoes",
+        "brand": "Yeezy",
         "price": "320.00",
         "description": "Butter.",
-        "img": "https://i.imgur.com/OXMxoz8.png"
+        "img": "https://i.imgur.com/JarZVpv.png",
+        "img2": "https://i.imgur.com/FCGZ35J.png",
+        "img3": "https://i.imgur.com/1bCCbzt.png",
+        "img4": "https://i.imgur.com/H6TTaqY.png",
+        "img5": "https://i.imgur.com/hxyrOjt.png",
+        "img6": "https://i.imgur.com/uZQnaMq.png"
     }, {
         "sku": "Q4-EZY2",
         "name": "Yeezy Boost 350 V2",
+        "category": "shoes",
+        "brand": "Yeezy",
         "price": "280.00",
         "description": "Beluga 2.0.",
-        "img": "https://i.imgur.com/OXMxoz8.png"
+        "img": "https://i.imgur.com/ALVe9m9.png",
+        "img2": "https://i.imgur.com/QnpiTXB.png",
+        "img3": "https://i.imgur.com/92ip6vV.png",
+        "img4": "https://i.imgur.com/6htThOr.png",
+        "img5": "https://i.imgur.com/l0FsONt.png",
+        "img6": "https://i.imgur.com/nGX7x83.png"
     }, {
         "sku": "BI-ZC3V",
         "name": "Air Jordan 4 Retro NRG",
+        "category": "shoes",
+        "brand": "Jordans",
         "price": "200.95",
         "description": "Raptors.",
-        "img": "https://i.imgur.com/OXMxoz8.png"
+        "img": "https://i.imgur.com/Pse1P6b.png",
+        "img2": "https://i.imgur.com/Ks814Zt.png",
+        "img3": "https://i.imgur.com/ed0aQTk.png",
+        "img4": "https://i.imgur.com/OeHux5O.png",
+        "img5": "https://i.imgur.com/WcKP6wg.png",
+        "img6": "https://i.imgur.com/kJjlCVu.png"
     }, {
         "sku": "XL-LHS2",
         "name": "Air Force 1 Low '07 PRM",
+        "category": "shoes",
+        "brand": "Nike",
         "price": "130.00",
         "description": "Just Do It.",
-        "img": "https://i.imgur.com/OXMxoz8.png"
+        "img": "https://i.imgur.com/GTFPYPJ.png",
+        "img2": "https://i.imgur.com/KQb2xRK.png",
+        "img3": "https://i.imgur.com/jjPESsN.png",
+        "img4": "https://i.imgur.com/FQIqWGN.png",
+        "img5": "https://i.imgur.com/U46UFD7.png",
+        "img6": "https://i.imgur.com/7xC4ZRe.png"
     }, {
         "sku": "FW-B82L",
         "name": "Yeezy Boost 350 V2",
+        "category": "shoes",
+        "brand": "Yeezy",
         "price": "320.00",
         "description": "Zebra.",
-        "img": "https://i.imgur.com/OXMxoz8.png"
+        "img": "https://i.imgur.com/qyp4Au7.png",
+        "img2": "https://i.imgur.com/qCZB6D6.png",
+        "img3": "https://i.imgur.com/tahqwRU.png",
+        "img4": "https://i.imgur.com/9UdX7UK.png",
+        "img5": "https://i.imgur.com/oTzl4dR.png",
+        "img6": "https://i.imgur.com/HFbY0dp.png",
     }, {
         "sku": "PK-8L4P",
         "name": "Sean Wotherspoon X Air Max 1/97",
+        "category": "shoes",
+        "brand": "Nike",
+        "category": "shoes",
         "price": "485.00",
         "description": "Vibrant Colors.",
-        "img": "https://i.imgur.com/OXMxoz8.png"
-    }, {
-        "sku": "PK-8L4P",
-        "name": "Yeezy Boost 350 V2",
-        "price": "450.00",
-        "description": "Bred.",
-        "img": "https://i.imgur.com/OXMxoz8.png"
+        "img": "https://i.imgur.com/myCmG6t.png",
+        "img2": "https://i.imgur.com/2hRikCL.png",
+        "img3": "https://i.imgur.com/7ogxiak.png",
+        "img4": "https://i.imgur.com/8ybqfag.png",
+        "img5": "https://i.imgur.com/dtUWgoX.png",
+        "img6": "https://i.imgur.com/uFx50IZ.png"
     }, {
         "sku": "PK-8L4P",
         "name": "Air Jordan 11 Retro",
+        "category": "shoes",
+        "brand": "Jordans",
+        "price": "450.00",
+        "description": "Bred 2012",
+        "img": "https://i.imgur.com/N6RIZdn.png",
+        "img2": "https://i.imgur.com/lkzY4fg.png",
+        "img3": "https://i.imgur.com/foWLSP5.png",
+        "img4": "https://i.imgur.com/RTh7xbU.png",
+        "img5": "https://i.imgur.com/Hua8taV.png",
+        "img6": "https://i.imgur.com/59f9A4o.png"
+    }, {
+        "sku": "PK-8L4P",
+        "name": "Air Jordan 11 Retro",
+        "category": "shoes",
+        "brand": "Jordans",
         "price": "285.00",
         "description": "Win like '96.",
-        "img": "https://i.imgur.com/OXMxoz8.png"
+        "img": "https://i.imgur.com/SpNuvH3.png",
+        "img2": "https://i.imgur.com/IxkB4Tg.png",
+        "img3": "https://i.imgur.com/eAZKH0T.png",
+        "img4": "https://i.imgur.com/iDyQhyc.png",
+        "img5": "https://i.imgur.com/PiaAzEh.png",
+        "img6": "https://i.imgur.com/51VwZfo.png"
     }, {
         "sku": "PK-8L4P",
         "name": "Yeezy 500",
+        "category": "shoes",
+        "brand": "Yeezy",
         "price": "285.00",
-        "description": "Blush.",
-        "img": "https://i.imgur.com/OXMxoz8.png"
+        "description": "Utility Black.",
+        "img": "https://i.imgur.com/uQHzPEj.png",
+        "img2": "https://i.imgur.com/HtxTdCw.png",
+        "img3": "https://i.imgur.com/yI6OaUf.png",
+        "img4": "https://i.imgur.com/TlpoqCr.png",
+        "img5": "https://i.imgur.com/n6qzV2G.png",
+        "img6": "https://i.imgur.com/K5fya1P.png",
     }, {
         "sku": "PK-8L4P",
-        "name": "Air Max '97",
+        "name": "Air Max 97",
+        "category": "shoes",
+        "brand": "Nike",
         "price": "160.00",
         "description": "University Red.",
-        "img": "https://i.imgur.com/OXMxoz8.png"
+        "img": "https://i.imgur.com/a5fCa0W.png",
+        "img2": "https://i.imgur.com/a5fCa0W.png",
+        "img3": "https://i.imgur.com/a5fCa0W.png",
+        "img4": "https://i.imgur.com/a5fCa0W.png",
+        "img5": "https://i.imgur.com/a5fCa0W.png",
+        "img6": "https://i.imgur.com/a5fCa0W.png"
     }, {
         "sku": "PK-8L4P",
         "name": "Air Jordan 3 Retro OG",
+        "category": "shoes",
+        "brand": "Jordans",
         "price": "285.00",
         "description": "Black Cement 2018.",
-        "img": "https://i.imgur.com/OXMxoz8.png"
+        "img": "https://i.imgur.com/BnURLgs.png",
+        "img2": "https://i.imgur.com/dc6brWW.png",
+        "img3": "https://i.imgur.com/5aR1ofo.png",
+        "img4": "https://i.imgur.com/wB0yfDX.png",
+        "img5": "https://i.imgur.com/BgCQF2v.png",
+        "img6": "https://i.imgur.com/QJoil5g.png"
     }, {
         "sku": "WH-JJV5",
-        "name": "Travis Scott X Air Jordan 4 Retro",
+        "name": "Air Jordan 1 Retro High OG 2017",
+        "category": "shoes",
+        "brand": "Jordans",
         "price": "285.00",
-        "description": "Cactus.",
-        "img": "https://i.imgur.com/OXMxoz8.png"
+        "description": "Royal",
+        "img": "https://i.imgur.com/u8ROrlW.png",
+        "img2": "https://i.imgur.com/QwZY8LA.png",
+        "img3": "https://i.imgur.com/WPSt3rF.png",
+        "img4": "https://i.imgur.com/9tS6hqM.png",
+        "img5": "https://i.imgur.com/EQV6hTT.png",
+        "img6": "https://i.imgur.com/QwZY8LA.png"
     }]
 
 module.exports = products;

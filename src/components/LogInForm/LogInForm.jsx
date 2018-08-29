@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import userService from '../../utils/userService';
+import './LogInForm.css'
 
 class LoginForm extends Component {
   constructor(props) {
@@ -31,8 +32,8 @@ class LoginForm extends Component {
 
   render() {
     return (
-      <div>
-        <header className="header-footer">Log In</header>
+      <div className="LogInForm">
+        <header className="header-footer">Enter Email and Password</header>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
           <div className="form-group">
             <div className="col-sm-12">

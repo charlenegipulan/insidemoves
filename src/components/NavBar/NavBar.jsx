@@ -19,15 +19,15 @@ const NavBar = (props) => {
     return(
         <div className='NavBar'>
             <div>
-                <h3>Inside Moves</h3>
+                <Link to='/'> <span class="inside-text">Inside</span> <span class="moves-text">Moves</span></Link>
             </div>
             <div>
                 <SearchBar />
             </div>
             <div className="icons">
-                <Link to='/checkout' className='NavBar-link'><i class="material-icons">&#xe8cc;</i></Link>&nbsp;
-                <Link to='/login' className='NavBar-link'><i class="material-icons">&#9829;</i></Link> &nbsp;
-                <Link to='/login' className='NavBar-link'><i class="material-icons">&#xe7fd;</i></Link>&nbsp;
+                <Link to='/login' className='NavBar-link'><img src={'https://i.imgur.com/va5Co1O.png'}></img></Link> &nbsp;
+                <Link to='/checkout' className='NavBar-link'><img src={'https://i.imgur.com/x0mEKHN.png'}></img></Link>&nbsp;
+                <Link to='/login' className='NavBar-link'><img src={'https://i.imgur.com/sPPabG2.png'}></img></Link>&nbsp;
             </div>
             <div className='NavBar-login'>
                 {nav}
