@@ -25,6 +25,7 @@ class ShopPage extends Component {
                     <ProductList 
                         products={this.state.products}
                         handleAddItem={this.props.handleAddItem}
+                        handleSelectedProduct={this.props.handleSelectedProduct}
                     />
             </div>
         )

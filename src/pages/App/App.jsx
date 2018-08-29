@@ -3,7 +3,6 @@ import './App.css';
 import LandingPage from '../LandingPage/LandingPage';
 import ShopPage from '../ShopPage/ShopPage';
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
   Redirect
@@ -11,6 +10,7 @@ import {
 import LogInPage from '../LogInPage/LogInPage';
 import SignUpPage from '../SignUpPage/SignUpPage';
 import CheckoutPage from '../CheckoutPage/CheckoutPage';
+import DetailsPage from '../DetailsPage/DetailsPage';
 import userService from '../../utils/userService';
 import NavBar from '../../components/NavBar/NavBar';
 import NavBar2 from '../../components/NavBar2/NavBar2';
@@ -23,7 +23,9 @@ class App extends Component {
     super(props);
     this.state = {
       user: {},
-      cart: null
+      cart: null,
+      products: [],
+      selectedProduct: null
     }
   }
 
@@ -62,6 +64,12 @@ class App extends Component {
     });
   }
 
+  handleSelectedProduct = (product) => {
+    this.setState({selectedProduct: product}, function() {
+      this.props.history.push(`/shop/${product._id}`);
+    });
+  }
+
   /*---------- Lifecycle Methods ----------*/
 
   componentDidMount() {
@@ -74,8 +82,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <Router>
+      <div className="App">
           <React.Fragment>
             <NavBar 
               user={this.state.user} 
@@ -88,11 +95,14 @@ class App extends Component {
             <Header />
             <Switch>
               <Route exact path="/" render={() => 
-                <LandingPage />
+                <LandingPage  
+                  user={this.state.user}
+                />
               } />
             <Route exact path="/shop" render={(props) =>
               <ShopPage 
                 {...props}
+                handleSelectedProduct={this.handleSelectedProduct}
                 handleAddItem={this.handleAddItem}
               />
             } />
@@ -106,19 +116,23 @@ class App extends Component {
                 {...props}
                 handleSignup={this.handleSignup}/>
             } 
-            
             />
             <Route exact path="/checkout" render={({ history }) =>
               <CheckoutPage
                 user={this.state.user}
                 cart={this.state.cart}
-                history={history}
-            />} 
-            
+                history={history} />
+            }
             />
+            <Route exact path="/shop/:id" render={( props ) =>
+              <DetailsPage 
+                {...props}
+                handleAddItem={this.handleAddItem}
+                product={this.state.selectedProduct}
+                />
+            }/> 
           </Switch>
           </React.Fragment>
-        </Router>
       </div>
     );
   }

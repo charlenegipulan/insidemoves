@@ -13,6 +13,7 @@ const ProductList = (props) => {
                     key={p.sku}
                     product={p} 
                     handleAddItem={props.handleAddItem}
+                    handleSelectedProduct={props.handleSelectedProduct}
                 />
             )}
         </div>
