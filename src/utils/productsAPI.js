@@ -22,6 +22,20 @@ function addProduct(productId) {
     .then(cart => cart);
 }
 
+// function search() {
+//   return fetch(BASE_URL, getAuthRequestOptions("GET"))
+//   .then(res => {
+//     if (res.ok) return res.json();
+//   })
+//   .then(responseData => {
+//     this.setState({
+//       results: responseData.results,
+//       loading: false
+//     });
+//     throw new Error("Bad Credentials");
+//   });
+// }
+
 /*--- Helper Functions ----*/
 function getAuthRequestOptions(method) {
   return {
@@ -36,4 +50,5 @@ function getAuthRequestOptions(method) {
 export default {
   index,
   addProduct
+  // search
 };

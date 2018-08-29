@@ -1,0 +1,13 @@
+.DetailsPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.DetailsPage-images {
+    margin: 0 auto;
+}
+
+.DetailsPage-product-detail {
+    margin: 0 auto;
+}

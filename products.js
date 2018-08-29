@@ -182,6 +182,19 @@ const products = [
         "img4": "https://i.imgur.com/9tS6hqM.png",
         "img5": "https://i.imgur.com/EQV6hTT.png",
         "img6": "https://i.imgur.com/QwZY8LA.png"
+    }, {
+        "sku": "WH-J5V5",
+        "name": "Chicago Bulls Scottie Pippen Mitchell & Ness Black",
+        "category": "jerseys",
+        "brand": "Swingman",
+        "price": "125.00",
+        "description": "1995-96 Hardwood Classics",
+        "img": "https://i.imgur.com/5XI1FqQ.png",
+        "img2": "https://i.imgur.com/5XI1FqQ.png",
+        "img3": "https://i.imgur.com/5XI1FqQ.png",
+        "img4": "https://i.imgur.com/5XI1FqQ.png",
+        "img5": "https://i.imgur.com/5XI1FqQ.png",
+        "img6": "https://i.imgur.com/5XI1FqQ.png"
     }]
 
 module.exports = products;

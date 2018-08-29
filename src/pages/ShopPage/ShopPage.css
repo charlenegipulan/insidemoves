@@ -1,5 +1,31 @@
 .ShopPage {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+}
+
+.ShopPage-SidePanel {
+    width: 15%
+}
+
+.ShopPage-MainPanel {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.ShopPage-ProductList {
+    margin-top: 0 auto;
+}
+
+.ShopPage input {
+    border: 2px solid #EAEAEA;
+    width: 80%;
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.ShopPage-content {
+    display: flex;
+    flex-direction: row;
 }

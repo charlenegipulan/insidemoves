@@ -2,7 +2,7 @@
     height: 8vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 20px;
 }
 
@@ -25,6 +25,7 @@
 
 .NavBar-login {
     font-size: 10px;
+    padding: 8px;
 }
 
 .NavBar-link {
@@ -33,9 +34,16 @@
 
 .icons {
     color: black;
+    display: inline;
 }
 
 .NavBar img {
     width: 20px;
     margin: 5px;
+}
+
+.right-nav-content {
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
 }

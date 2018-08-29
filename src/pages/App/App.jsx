@@ -5,7 +5,6 @@ import ShopPage from '../ShopPage/ShopPage';
 import {
   Switch,
   Route,
-  Redirect
 } from 'react-router-dom'
 import LogInPage from '../LogInPage/LogInPage';
 import SignUpPage from '../SignUpPage/SignUpPage';
@@ -13,10 +12,10 @@ import CheckoutPage from '../CheckoutPage/CheckoutPage';
 import DetailsPage from '../DetailsPage/DetailsPage';
 import userService from '../../utils/userService';
 import NavBar from '../../components/NavBar/NavBar';
-import NavBar2 from '../../components/NavBar2/NavBar2';
-import Header from '../../components/Header/Header'
 import productsAPI from '../../utils/productsAPI';
 import ordersAPI from '../../utils/ordersAPI';
+import SearchBar from '../../components/SearchBar/SearchBar';
+// import SearchResultsPage from '../../SearchResultsPage/SearchResultsPage';
 
 class App extends Component {
   constructor(props) {
@@ -25,8 +24,9 @@ class App extends Component {
       user: {},
       cart: null,
       products: [],
-      selectedProduct: null
-    }
+      results: [],
+      loading: true
+    };
   }
 
   /*---------- Callback Methods ----------*/
@@ -65,18 +65,18 @@ class App extends Component {
   }
 
   handleSelectedProduct = (product) => {
-    this.setState({selectedProduct: product}, function() {
-      this.props.history.push(`/shop/${product._id}`);
-    });
+    this.props.history.push(`/shop/${product._id}`);
   }
 
   /*---------- Lifecycle Methods ----------*/
-
   componentDidMount() {
     let user = userService.getUser();
     this.setState({user}, function() {
       ordersAPI.getCart()
       .then(cart => this.setState({ cart }));
+    });
+    productsAPI.index().then(products => {
+        this.setState({products});
     });
   }
 
@@ -87,12 +87,9 @@ class App extends Component {
             <NavBar 
               user={this.state.user} 
               handleLogout={this.handleLogout}
-            />
-            <NavBar2 
               cart={this.state.cart}
               handleRemoveItem={this.handleRemoveItem}
             />
-            <Header />
             <Switch>
               <Route exact path="/" render={() => 
                 <LandingPage  
@@ -102,6 +99,7 @@ class App extends Component {
             <Route exact path="/shop" render={(props) =>
               <ShopPage 
                 {...props}
+                products={this.state.products}
                 handleSelectedProduct={this.handleSelectedProduct}
                 handleAddItem={this.handleAddItem}
               />
@@ -128,9 +126,13 @@ class App extends Component {
               <DetailsPage 
                 {...props}
                 handleAddItem={this.handleAddItem}
-                product={this.state.selectedProduct}
+                products={this.state.products}
                 />
             }/> 
+              <SearchBar 
+                handleSearchResults={this.handleSearchResults}
+                />
+              {/* <Search /> */}
           </Switch>
           </React.Fragment>
       </div>

@@ -8,13 +8,12 @@ const SidePanel = (props) => {
         <div className='SidePanel'>
             Find By:
             <hr/>
-            &nbsp;&nbsp;Brand:
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;Nike<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;Jordans<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;Yeezy<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;Adidas<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;Vans<br />
+            <p className="Brand-text">&nbsp;&nbsp;Brand:</p>
+            <p className="Brand-list-text">&nbsp;&nbsp;&nbsp;&nbsp;Nike</p>
+            <p className="Brand-list-text">&nbsp;&nbsp;&nbsp;&nbsp;Jordans</p>
+            <p className="Brand-list-text">&nbsp;&nbsp;&nbsp;&nbsp;Yeezy</p>
+            <p className="Brand-list-text">&nbsp;&nbsp;&nbsp;&nbsp;Adidas</p>
+            <p className="Brand-list-text">&nbsp;&nbsp;&nbsp;&nbsp;Vans</p>
             <br />
         </div>
     );

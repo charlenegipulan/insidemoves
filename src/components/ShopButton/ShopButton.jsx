@@ -4,7 +4,7 @@ import './ShopButton.css';
 
 const ShopButton = (props) => {
   return (
-    <div className="ShopButton">
+    <div>
         <Link to="/shop" className="ShopButton">Shop Now</Link>
     </div>
   );

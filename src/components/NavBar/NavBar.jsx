@@ -21,16 +21,15 @@ const NavBar = (props) => {
             <div>
                 <Link to='/'> <span class="inside-text">Inside</span> <span class="moves-text">Moves</span></Link>
             </div>
-            <div>
-                <SearchBar />
-            </div>
-            <div className="icons">
-                <Link to='/login' className='NavBar-link'><img src={'https://i.imgur.com/va5Co1O.png'}></img></Link> &nbsp;
-                <Link to='/checkout' className='NavBar-link'><img src={'https://i.imgur.com/x0mEKHN.png'}></img></Link>&nbsp;
-                <Link to='/login' className='NavBar-link'><img src={'https://i.imgur.com/sPPabG2.png'}></img></Link>&nbsp;
-            </div>
-            <div className='NavBar-login'>
-                {nav}
+            <div className="right-nav-content">
+                <div className="icons">
+                    <Link to='/login' className='NavBar-link'><img src={'https://i.imgur.com/va5Co1O.png'}></img></Link> &nbsp;
+                    <Link to='/checkout' className='NavBar-link'><img src={'https://i.imgur.com/x0mEKHN.png'}></img></Link>&nbsp;
+                    <Link to='/login' className='NavBar-link'><img src={'https://i.imgur.com/sPPabG2.png'}></img></Link>&nbsp;
+                </div>
+                <div className="NavBar-login">
+                <p>{nav} </p>
+                </div>
             </div>
         </div>
     );

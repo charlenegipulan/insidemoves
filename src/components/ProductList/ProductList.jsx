@@ -8,9 +8,9 @@ const ProductList = (props) => {
     <h2>All Products</h2>
     <hr />
         <div className="ProductList-Products">
-            {props.products.map(p => 
+            {props.products.map((p, i) => 
                 <Product 
-                    key={p.sku}
+                    key={i}
                     product={p} 
                     handleAddItem={props.handleAddItem}
                     handleSelectedProduct={props.handleSelectedProduct}

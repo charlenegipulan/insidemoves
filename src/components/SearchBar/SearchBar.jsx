@@ -1,16 +1,23 @@
 import React from 'react';
 import './SearchBar.css';
 
-const SearchBar = () => {
+class SearchBar extends React.Component {
+
+  handleSearch(evt) {
+    this.props.handleSearchResults(evt.target.value)
+  }
+
+  render(props) {
     return (
         <div className="SearchBar">
-     <form>
-       <input
-         placeholder="search"
-       />
-     </form>
+            {/* <input
+              placeholder="search"
+              type="text"
+              onChange={this.handleSearch.bind(this)}
+            /> */}
         </div>
     )
+  }
 }
 
 export default SearchBar;
