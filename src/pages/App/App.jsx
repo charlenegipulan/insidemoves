@@ -14,6 +14,7 @@ import userService from '../../utils/userService';
 import NavBar from '../../components/NavBar/NavBar';
 import productsAPI from '../../utils/productsAPI';
 import ordersAPI from '../../utils/ordersAPI';
+import tokenService from '../../utils/tokenService';
 
 class App extends Component {
   constructor(props) {
@@ -68,10 +69,11 @@ class App extends Component {
   }
 
   handleAddItemToFavorites = (productId) => {
-    console.log("add to favorite button clicked")
+    if (this.state.user.favorites.some(f => f === productId)) return;
     productsAPI.favoriteItem(productId)
-    .then(favorites => {
-      this.setState({ favorites });
+    .then(updatedToken => {
+      tokenService.setToken(updatedToken);
+      this.setState({ user: userService.getUser() });
     })
   }
 
@@ -79,8 +81,10 @@ class App extends Component {
   componentDidMount() {
     let user = userService.getUser();
     this.setState({user}, function() {
-      ordersAPI.getCart()
-      .then(cart => this.setState({ cart }));
+      if (user) {
+        ordersAPI.getCart()
+        .then(cart => this.setState({ cart }));
+      }
     });
     productsAPI.index().then(products => {
       this.setState({products});
@@ -109,7 +113,6 @@ class App extends Component {
                 products={this.state.products}
                 handleSelectedProduct={this.handleSelectedProduct}
                 handleAddItem={this.handleAddItem}
-                
               />
             } />
             <Route exact path="/login" render={(props) =>

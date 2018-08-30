@@ -14,7 +14,6 @@ const LandingPage = (props) => {
                     Discover the perfect pair 
                     <br />
                     <br />
-                    
                 <ShopButton />
             </div>
         </div>

@@ -3,7 +3,7 @@ import tokenService from "./tokenService";
 const BASE_URL = "/api/products/";
 
 function index() {
-  return fetch(BASE_URL, getAuthRequestOptions("GET"))
+  return fetch(BASE_URL)
     .then(res => {
       if (res.ok) return res.json();
       throw new Error("Bad Credentials");
@@ -24,13 +24,12 @@ function addProduct(productId) {
 
 function favoriteItem(productId) {
   var options = getAuthRequestOptions("POST");
-  options.body = JSON.stringify({ productId });
-  return fetch(BASE_URL + productId + "/favorite", options)
+  return fetch(`${BASE_URL}${productId}/favorite`, options)
     .then(res => {
       if (res.ok) return res.json();
-      throw new Error("Error with adding a favorite item");
+      throw new Error("Error adding a favorite item");
     })
-    // .then(favorites.push(productId) => favorites));
+    .then((updatedToken) => updatedToken);
 }
 
 /*--- Helper Functions ----*/

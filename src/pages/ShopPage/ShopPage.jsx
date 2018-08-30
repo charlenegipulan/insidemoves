@@ -11,17 +11,16 @@ class ShopPage extends Component {
         super(props);
         this.state = {
             filterText: '',
+            brandFilter: '',
             products: [],
             filteredProducts: []
         }
     }
 
-    filterByNike = () => {
-        console.log('clicked Nike!')
-        var text = 'Nike'
+    filterByBrand = (brand) => {
         this.setState({
-            filterText: text,
-            filteredProducts: text ? this.state.products.filter(p => p.brand.toLowerCase().includes(text)) : this.state.products
+            brandFilter: brand,
+            filteredProducts: this.state.products.filter(p => p.brand.toLowerCase() === brand && p.name.toLowerCase().includes(this.state.filterText))
         });
     }
 
@@ -50,7 +49,7 @@ class ShopPage extends Component {
                     <div className="ShopPage-SidePanel">
                         <SidePanel 
                             products={this.state.filteredProducts}
-                            filterByNike={this.props.filterByNike}
+                            filterByBrand={this.filterByBrand}
                         />
                     </div>
                     <div className="ShopPage-MainPanel">

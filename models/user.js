@@ -14,7 +14,7 @@ var userSchema = new Schema({
     admin: { type: Boolean, default: false },
     password: { type: String, required: true },
     address: { type: String},
-    favorites: [{type: mongoose.Schema.Types.ObjectId, ref: 'Product'}]
+    favorites: [{type: Schema.Types.ObjectId, ref: 'Product'}]
 }, {
     timestamps: true
 });
