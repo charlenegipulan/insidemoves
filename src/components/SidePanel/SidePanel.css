@@ -11,3 +11,13 @@
 .Brand-list-text {
     font-size: 10px;
 }
+
+.brand-buttons {
+    border: none;
+    font-size: 10px;
+}
+
+.brand-buttons:hover {
+    cursor: pointer;
+    color: red;
+}

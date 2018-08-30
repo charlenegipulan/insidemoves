@@ -8,12 +8,12 @@ const SidePanel = (props) => {
         <div className='SidePanel'>
             Find By:
             <hr/>
-            Brand 
-            <button onClick={() => props.filterByBrand('nike')}> Nike </button>
-            <p className="Brand-list-text">&nbsp;&nbsp;&nbsp;&nbsp;Jordans</p>
-            <p className="Brand-list-text">&nbsp;&nbsp;&nbsp;&nbsp;Yeezy</p>
-            <p className="Brand-list-text">&nbsp;&nbsp;&nbsp;&nbsp;Adidas</p>
-            <p className="Brand-list-text">&nbsp;&nbsp;&nbsp;&nbsp;Vans</p>
+            Brand <br/>
+            &nbsp;&nbsp;&nbsp;<button className="brand-buttons" onClick={() => props.filterByBrand('nike')}> Nike </button><br/>
+            &nbsp;&nbsp;&nbsp;<button className="brand-buttons" onClick={() => props.filterByBrand('jordans')}> Jordans </button><br/>
+            &nbsp;&nbsp;&nbsp;<button className="brand-buttons" onClick={() => props.filterByBrand('yeezy')}> Yeezy </button><br/>
+            &nbsp;&nbsp;&nbsp;<button className="brand-buttons" onClick={() => props.filterByBrand('adidas')}> Adidas </button><br/>
+            &nbsp;&nbsp;&nbsp;<button className="brand-buttons" onClick={() => props.filterByBrand('vans')}> Vans </button><br/>
             <br />
         </div>
     );

@@ -5,8 +5,8 @@ import './NavBar2.css';
 const NavBar2 = (props) => {
     return(
         <div className='NavBar2'>
-            <div>SHOES</div>
-            <div>JERSEYS</div>
+            <div><button>SHOES</button></div>
+            <div><button>JERSEYS</button></div>
         </div>
     );
 };
