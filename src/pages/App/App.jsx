@@ -9,6 +9,7 @@ import {
 import LogInPage from '../LogInPage/LogInPage';
 import SignUpPage from '../SignUpPage/SignUpPage';
 import CheckoutPage from '../CheckoutPage/CheckoutPage';
+import PaymentPage from '../PaymentPage/PaymentPage';
 import FavoritesPage from '../FavoritesPage/FavoritesPage';
 import DetailsPage from '../DetailsPage/DetailsPage';
 import userService from '../../utils/userService';
@@ -52,17 +53,11 @@ class App extends Component {
     })
   }
 
-  handleRemoveItem = (product) => {
-    this.setState(prevState => {
-      var itemIdx = prevState.cart.findIndex(item => item.product === product);
-      var item = prevState.cart[itemIdx, 1];
-      if (item.quantity === 1) {
-        prevState.cart.splice(itemIdx, 1);
-      } else {
-        item.quantity--;
-      }
-      return prevState;
-    });
+  handleRemoveQuantity = (productId) => {
+    productsAPI.removeProduct(productId)
+    .then(cart => {
+      this.setState({ cart });
+    })
   }
 
   handleSelectedProduct = (product) => {
@@ -127,8 +122,18 @@ class App extends Component {
                 handleSignup={this.handleSignup}/>
             } 
             />
-            <Route exact path="/checkout" render={({ history }) =>
+            <Route exact path="/checkout" render={( props ) =>
               <CheckoutPage
+                {...props}
+                user={this.state.user}
+                cart={this.state.cart}
+                handleRemoveQuantity={this.handleRemoveQuantity}
+                handleAddItem={this.handleAddItem}
+                 />
+            }
+            />
+            <Route exact path="/payment" render={({ history }) =>
+              <PaymentPage
                 user={this.state.user}
                 cart={this.state.cart}
                 history={history} />
@@ -148,6 +153,7 @@ class App extends Component {
             <Route exact path="/shop/:id" render={( props ) =>
               <DetailsPage 
                 {...props}
+                user={this.state.user}
                 handleAddItem={this.handleAddItem}
                 products={this.state.products}
                 handleAddItemToFavorites={this.handleAddItemToFavorites}

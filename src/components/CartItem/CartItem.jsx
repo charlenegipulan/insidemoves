@@ -17,8 +17,8 @@ const CartItem = (props) =>  {
             <div className="InputSpinner">
               <input type="text" class="form-control" value={props.item.quantity} />
               <div className="input-group-vertical">
-                <button class="btn btn-default" type="button" onClick={() => props.handleAddItem(props.item.productId)}><i class="fa fa-caret-up"></i></button>
-                <button class="btn btn-default" type="button" onClick={() => props.handleRemoveQuantity(props.item.productId)}><i class="fa fa-caret-down"></i></button>
+                <button class="btn btn-default" type="button" onClick={() => props.handleAddItem(props.item.product._id)}><i class="fa fa-caret-up"></i></button>
+                <button class="btn btn-default" type="button" onClick={() => props.handleRemoveQuantity(props.item.product._id)}><i class="fa fa-caret-down"></i></button>
               </div>
             </div>
         </div>

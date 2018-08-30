@@ -6,6 +6,7 @@ var productsCtrl = require('../../controllers/products');
 router.get('/', productsCtrl.index);
 router.post('/:id/favorite', productsCtrl.addFavorite);
 router.post('/checkout', productsCtrl.addProduct);
+router.delete('/checkout/:id', productsCtrl.removeProduct);
 
 /*---------- Protected Routes ----------*/
 

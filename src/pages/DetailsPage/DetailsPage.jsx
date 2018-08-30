@@ -100,14 +100,11 @@ const DetailsPage = (props) => {
                 <p>{product.description}</p>
                 <p>{product.sku}</p>
                 <p>{product.price}</p>
-                <button onClick={() => props.handleAddItem(product._id)}> Add to Cart </button>
-                <button onClick={() => props.handleAddItemToFavorites(product._id)}> Add To Favorites </button>
+                {props.user ? <button onClick={() => props.handleAddItem(product._id)}> Add to Cart </button> : null}
+                {props.user ?<button onClick={() => props.handleAddItemToFavorites(product._id)}> Add To Favorites </button>: null}
+                {/* {props.user ? <button onClick={() => props.handleAddItem(product._id)}> Add to Cart </button> : null}
+                {props.user ?<button onClick={() => props.handleAddItemToFavorites(product._id)}> Add To Favorites </button>: null} */}
             </div> 
-
-
-
-
-
 
 
 

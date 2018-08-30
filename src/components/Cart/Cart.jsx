@@ -1,9 +1,9 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './Cart.css'
 import CartItems from '../CartItems/CartItems';
 
 const Cart = (props) => {
-    // let total = props.cart.items.reduce((tot, item) => tot + parseFloat(item.product.price * item.quantity, 0));
     let total = props.cart.items.reduce((tot, item) => tot + (item.product.price * item.quantity), 0);
     let itemCount = props.cart.items.reduce((tot, item) => tot + (item.quantity), 0);
                 return (
@@ -11,7 +11,8 @@ const Cart = (props) => {
             <div className="CartItems-panel">
                 <CartItems
                     items={props.cart.items}
-                    handleRemoveItem={props.handleRemoveItem} 
+                    handleRemoveQuantity={props.handleRemoveQuantity} 
+                    handleAddItem={props.handleAddItem}
                     total={this.total}
                 />
                 </div>
@@ -22,7 +23,9 @@ const Cart = (props) => {
                     <p> Subtotal: {total} </p>
                     <p>Tax: 7.25%</p>
                     <h3>Total:  ${parseFloat(total + (total * .0725)).toFixed(2)}</h3>
-                    <button> Checkout </button>
+
+                    <Link to='/payment'> Checkout </Link>
+
                 </div>
         </section>
     );

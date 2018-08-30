@@ -18,6 +18,14 @@ function addProduct(req, res) {
     });
 }
 
+function removeProduct(req, res) {
+    Order.cartForUser(req.user._id, function(cart) {
+        cart.removeProduct(req.params.id, function(cart) {
+            res.json(cart);
+        });
+    });
+}
+
 function addFavorite(req, res) {
     User.findById(req.user._id, function(err, user) {
         user.favorites.push(req.params.id);
@@ -28,8 +36,14 @@ function addFavorite(req, res) {
     });
 }
 
+function getAllFavorites(req, res) {
+    Product.find({_id: req.user.favorites})
+}
+
 module.exports = {
     index,
     addProduct,
-    addFavorite
+    removeProduct,
+    addFavorite,
+    getAllFavorites
 }

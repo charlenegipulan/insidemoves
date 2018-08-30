@@ -10,7 +10,8 @@ const CartItems = (props) => (
         {props.items.length ?
             props.items.map(item => <CartItem 
                 item={item} 
-                handleRemoveItem={props.handleRemoveItem}
+                handleRemoveQuantity={props.handleRemoveQuantity}
+                handleAddItem={props.handleAddItem}
             />)
         :
             <h3> No items</h3>
