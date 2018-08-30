@@ -22,19 +22,16 @@ function addProduct(productId) {
     .then(cart => cart);
 }
 
-// function search() {
-//   return fetch(BASE_URL, getAuthRequestOptions("GET"))
-//   .then(res => {
-//     if (res.ok) return res.json();
-//   })
-//   .then(responseData => {
-//     this.setState({
-//       results: responseData.results,
-//       loading: false
-//     });
-//     throw new Error("Bad Credentials");
-//   });
-// }
+function favoriteItem(productId) {
+  var options = getAuthRequestOptions("POST");
+  options.body = JSON.stringify({ productId });
+  return fetch(BASE_URL + productId + "/favorite", options)
+    .then(res => {
+      if (res.ok) return res.json();
+      throw new Error("Error with adding a favorite item");
+    })
+    // .then(favorites.push(productId) => favorites));
+}
 
 /*--- Helper Functions ----*/
 function getAuthRequestOptions(method) {
@@ -49,6 +46,6 @@ function getAuthRequestOptions(method) {
 
 export default {
   index,
-  addProduct
-  // search
+  addProduct,
+  favoriteItem
 };

@@ -16,6 +16,15 @@ class ShopPage extends Component {
         }
     }
 
+    filterByNike = () => {
+        console.log('clicked Nike!')
+        var text = 'Nike'
+        this.setState({
+            filterText: text,
+            filteredProducts: text ? this.state.products.filter(p => p.brand.toLowerCase().includes(text)) : this.state.products
+        });
+    }
+
     updateFilter = (e) => {
         var text = e.target.value.toLowerCase();
         this.setState({
@@ -39,7 +48,10 @@ class ShopPage extends Component {
                 </div>
                 <div className="ShopPage-content">
                     <div className="ShopPage-SidePanel">
-                        <SidePanel />
+                        <SidePanel 
+                            products={this.state.filteredProducts}
+                            filterByNike={this.props.filterByNike}
+                        />
                     </div>
                     <div className="ShopPage-MainPanel">
                         <div>

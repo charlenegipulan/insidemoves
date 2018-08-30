@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './NavBar.css';
-import SearchBar from '../SearchBar/SearchBar';
 
 const NavBar = (props) => {
     let nav = props.user ? 
@@ -19,13 +18,13 @@ const NavBar = (props) => {
     return(
         <div className='NavBar'>
             <div>
-                <Link to='/'> <span class="inside-text">Inside</span> <span class="moves-text">Moves</span></Link>
+                <Link to='/'> <span className="inside-text">Inside</span> <span className="moves-text">Moves</span></Link>
             </div>
             <div className="right-nav-content">
                 <div className="icons">
-                    <Link to='/login' className='NavBar-link'><img src={'https://i.imgur.com/va5Co1O.png'}></img></Link> &nbsp;
-                    <Link to='/checkout' className='NavBar-link'><img src={'https://i.imgur.com/x0mEKHN.png'}></img></Link>&nbsp;
-                    <Link to='/login' className='NavBar-link'><img src={'https://i.imgur.com/sPPabG2.png'}></img></Link>&nbsp;
+                    <Link to='/checkout' className='NavBar-link'><img src={'https://i.imgur.com/x0mEKHN.png'} alt="icon"></img></Link>&nbsp;
+                    <Link to='/shop' className='NavBar-link'><img src={'https://i.imgur.com/va5Co1O.png'} alt="icon"></img></Link> &nbsp;
+                    <Link to='/login' className='NavBar-link'><img src={'https://i.imgur.com/sPPabG2.png'} alt="icon"></img></Link>&nbsp;
                 </div>
                 <div className="NavBar-login">
                 <p>{nav} </p>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../../components/Header/Header'
-import NavBar from '../../components/NavBar/NavBar'
+import NavBar2 from '../../components/NavBar2/NavBar2'
 import LoginForm from '../../components/LogInForm/LogInForm';
 
 const LogInPage = (props) => {
@@ -8,6 +8,8 @@ const LogInPage = (props) => {
         <div className="LogInPage">
 
             <div>
+                <NavBar2 />
+                <Header />
                 <LoginForm 
                     handleLogin={props.handleLogin}
                     {...props}

@@ -14,14 +14,13 @@ import userService from '../../utils/userService';
 import NavBar from '../../components/NavBar/NavBar';
 import productsAPI from '../../utils/productsAPI';
 import ordersAPI from '../../utils/ordersAPI';
-import SearchBar from '../../components/SearchBar/SearchBar';
-// import SearchResultsPage from '../../SearchResultsPage/SearchResultsPage';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       user: {},
+      favorites: [],
       cart: null,
       products: [],
       results: [],
@@ -68,6 +67,14 @@ class App extends Component {
     this.props.history.push(`/shop/${product._id}`);
   }
 
+  handleAddItemToFavorites = (productId) => {
+    console.log("add to favorite button clicked")
+    productsAPI.favoriteItem(productId)
+    .then(favorites => {
+      this.setState({ favorites });
+    })
+  }
+
   /*---------- Lifecycle Methods ----------*/
   componentDidMount() {
     let user = userService.getUser();
@@ -76,7 +83,7 @@ class App extends Component {
       .then(cart => this.setState({ cart }));
     });
     productsAPI.index().then(products => {
-        this.setState({products});
+      this.setState({products});
     });
   }
 
@@ -102,6 +109,7 @@ class App extends Component {
                 products={this.state.products}
                 handleSelectedProduct={this.handleSelectedProduct}
                 handleAddItem={this.handleAddItem}
+                
               />
             } />
             <Route exact path="/login" render={(props) =>
@@ -127,12 +135,12 @@ class App extends Component {
                 {...props}
                 handleAddItem={this.handleAddItem}
                 products={this.state.products}
+                handleAddItemToFavorites={this.handleAddItemToFavorites}
                 />
             }/> 
-              <SearchBar 
+              {/* <SearchBar 
                 handleSearchResults={this.handleSearchResults}
-                />
-              {/* <Search /> */}
+                /> */}
           </Switch>
           </React.Fragment>
       </div>

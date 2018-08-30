@@ -1,11 +1,3 @@
-.CheckoutPage {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    padding-top: 50px;
-}
-
 .CheckoutPage-cart {
-    width: 70%;
-    text-align: center;
+    margin-top: 30px;
 }

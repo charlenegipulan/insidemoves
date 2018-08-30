@@ -1,4 +1,3 @@
-.LandingBanner img{
-    width: 50%;
-    margin: 0 auto;
+.LandingBanner {
+    padding: 20px;
 }

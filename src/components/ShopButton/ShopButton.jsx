@@ -5,7 +5,7 @@ import './ShopButton.css';
 const ShopButton = (props) => {
   return (
     <div>
-        <Link to="/shop" className="ShopButton">Shop Now</Link>
+        <Link to="/shop" className="ShopButton">Shop all</Link>
     </div>
   );
 }

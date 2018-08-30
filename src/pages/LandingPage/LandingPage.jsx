@@ -10,12 +10,11 @@ const LandingPage = (props) => {
             <div className="LandingBanner-Panel">
                 <LandingBanner />
             </div>
-
-            <div className="tagline-container">
-                Discover the perfect pair 
-            </div>
-            <br/>
             <div className="LandingPage-ShopButton">
+                    Discover the perfect pair 
+                    <br />
+                    <br />
+                    
                 <ShopButton />
             </div>
         </div>

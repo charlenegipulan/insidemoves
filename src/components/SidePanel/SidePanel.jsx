@@ -8,8 +8,8 @@ const SidePanel = (props) => {
         <div className='SidePanel'>
             Find By:
             <hr/>
-            <p className="Brand-text">&nbsp;&nbsp;Brand:</p>
-            <p className="Brand-list-text">&nbsp;&nbsp;&nbsp;&nbsp;Nike</p>
+            Brand 
+            <button onClick={() => props.filterByNike}> Nike </button>
             <p className="Brand-list-text">&nbsp;&nbsp;&nbsp;&nbsp;Jordans</p>
             <p className="Brand-list-text">&nbsp;&nbsp;&nbsp;&nbsp;Yeezy</p>
             <p className="Brand-list-text">&nbsp;&nbsp;&nbsp;&nbsp;Adidas</p>

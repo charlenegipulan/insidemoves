@@ -4,12 +4,17 @@ var bcrypt = require('bcrypt');
 
 const SALT_ROUNDS = 6;
 
+// var favoritesSchema = new Schema({
+//   product: {type: Schema.Types.ObjectId, ref: 'Product'}
+// })
+
 var userSchema = new Schema({
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     admin: { type: Boolean, default: false },
     password: { type: String, required: true },
-    address: { type: String}
+    address: { type: String},
+    favorites: [{type: mongoose.Schema.Types.ObjectId, ref: 'Product'}]
 }, {
     timestamps: true
 });

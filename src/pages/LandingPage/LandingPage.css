@@ -1,4 +1,13 @@
 .LandingPage {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
+
+.LandingBanner-Panel {
+    width: 60%;
+    padding: 20px;
+}
+
+.LandingPage-ShopButton {
+    margin: auto;
 }
