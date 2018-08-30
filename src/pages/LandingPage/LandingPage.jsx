@@ -7,13 +7,17 @@ const LandingPage = (props) => {
     
     return (
         <div className="LandingPage">
-                <div>
-                    <LandingBanner />
-                </div>
-                <br />
-                <div className="LandingPage-ShopButton">
-                    <ShopButton />
-                </div>
+            <div className="LandingBanner-Panel">
+                <LandingBanner />
+            </div>
+
+            <div className="tagline-container">
+                Discover the perfect pair 
+            </div>
+            <br/>
+            <div className="LandingPage-ShopButton">
+                <ShopButton />
+            </div>
         </div>
     )
 }

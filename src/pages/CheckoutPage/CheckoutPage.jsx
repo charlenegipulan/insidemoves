@@ -1,6 +1,6 @@
 import React from 'react';
 import Cart from '../../components/Cart/Cart';
-import CartItem from '../../components/CartItem/CartItem';
+import CartItems from '../../components/CartItems/CartItems';
 import './CheckoutPage.css';
 
 const CheckoutPage = (props) => {
@@ -17,8 +17,8 @@ const CheckoutPage = (props) => {
         <div className="CheckoutPage-details">
             <h3> Order Summary</h3>
             <hr />
-            {/* <p> {props.item.product.name}</p>      */}
-                    
+            {/* <p> {props.order.product.name}</p>      */}
+                     
         </div>
         </div>
     );
