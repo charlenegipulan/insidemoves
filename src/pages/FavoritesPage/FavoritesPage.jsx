@@ -4,11 +4,10 @@ import NavBar2 from '../../components/NavBar2/NavBar2'
 
 const FavoritesPage = (props) => {
     return (
-        
-        <div>
-        <NavBar2 />
-        <Header />
-
+        <div className="FavoritesPage">
+            <NavBar2 />
+            <Header />
+            {props.favorites.products}
         </div>
     );
 }

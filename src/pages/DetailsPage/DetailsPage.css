@@ -11,13 +11,15 @@
 }
 
 .DetailsPage-images {
-    margin: 0 auto;
+    width: 50%;
+    margin-left: 30px;
 }
 
 .DetailsPage-product-detail {
     margin: 0 auto;
     margin-left: 10px;
     padding-top: 20px;
+    width: 50%;
 }
 
 .DetailsPage-product-detail button {
@@ -38,7 +40,6 @@
 
 #myCarousel .list-inline {
     white-space:nowrap;
-    overflow-x:auto;
 }
 
 #myCarousel .carousel-indicators {

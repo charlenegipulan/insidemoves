@@ -8,8 +8,6 @@ const DetailsPage = (props) => {
     var view;
     if (product) {
         view = <React.Fragment>
-
-
             <div className="DetailsPage-content">
             <div className="DetailsPage-images">
                 {/* <div>
@@ -27,72 +25,68 @@ const DetailsPage = (props) => {
 
 {/* <!-- main slider carousel --> */}
 <div class="row">
-    <div class="col-lg-8 offset-lg-2" id="slider">
+    <div id="slider">
             <div id="myCarousel" class="carousel slide">
                 {/* <!-- main slider carousel items --> */}
                 <div class="carousel-inner">
                     <div class="active item carousel-item" data-slide-number="0">
-                        <img src={product.img} alt={product.name} class="img-fluid"/>
+                        <img src={product.img} alt={product.name} class="img-fluid" style={{width:450, height:300}}/>
                     </div>
                     <div class="item carousel-item" data-slide-number="1">
-                    <img src={product.img2} alt={product.name} class="img-fluid"/>
+                    <img src={product.img2} alt={product.name} class="img-fluid" style={{width:450, height:300}}/>
                     </div>
                     <div class="item carousel-item" data-slide-number="2">
-                    <img src={product.img3} alt={product.name} class="img-fluid"/>
+                    <img src={product.img3} alt={product.name} class="img-fluid" style={{width:450, height:300}}/>
                     </div>
                     <div class="item carousel-item" data-slide-number="3">
-                    <img src={product.img4} alt={product.name} class="img-fluid"/>
+                    <img src={product.img4} alt={product.name} class="img-fluid" style={{width:450, height:300}}/>
                     </div>
                     <div class="item carousel-item" data-slide-number="4">
-                    <img src={product.img5} alt={product.name} class="img-fluid"/>
+                    <img src={product.img5} alt={product.name} class="img-fluid" style={{width:450, height:300}}/>
                     </div>
                     <div class="item carousel-item" data-slide-number="5">
-                    <img src={product.img6} alt={product.name} class="img-fluid"/>
+                    <img src={product.img6} alt={product.name} class="img-fluid" style={{width:450, height:300}}/>
                     </div>
 
-                    <a class="carousel-control left pt-3" href="#myCarousel" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-                    <a class="carousel-control right pt-3" href="#myCarousel" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+
 
                 </div>
                 {/* <!-- main slider carousel nav controls --> */}
 
                 <ul class="carousel-indicators list-inline">
-                    <li class="list-inline-item active">
+                    {/* <li class="list-inline-item active">
                         <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#myCarousel">
                         <img src={product.img} alt={product.name} class="img-fluid"/>
                         </a>
-                    </li>
+                    </li> */}
                     <li class="list-inline-item">
                         <a id="carousel-selector-1" data-slide-to="1" data-target="#myCarousel">
-                        <img src={product.img2} alt={product.name} class="img-fluid"/>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a id="carousel-selector-2" data-slide-to="2" data-target="#myCarousel">
-                        <img src={product.img3} alt={product.name} class="img-fluid"/>
+                        <img src={product.img2} alt={product.name} class="img-fluid" style={{width:120, height:80}}/>
                         </a>
                     </li>
                     <li class="list-inline-item">
                         <a id="carousel-selector-3" data-slide-to="3" data-target="#myCarousel">
-                        <img src={product.img3} alt={product.name} class="img-fluid"/>
+                        <img src={product.img3} alt={product.name} class="img-fluid" style={{width:120, height:80}}/>
                         </a>
                     </li>
                     <li class="list-inline-item">
                         <a id="carousel-selector-4" data-slide-to="4" data-target="#myCarousel">
-                        <img src={product.img4} alt={product.name} class="img-fluid"/>
+                        <img src={product.img4} alt={product.name} class="img-fluid" style={{width:120, height:80}}/>
                         </a>
                     </li>
                     <li class="list-inline-item">
                         <a id="carousel-selector-5" data-slide-to="4" data-target="#myCarousel">
-                        <img src={product.img5} alt={product.name} class="img-fluid"/>
+                        <img src={product.img5} alt={product.name} class="img-fluid" style={{width:120, height:80}}/>
                         </a>
                     </li>
                     <li class="list-inline-item">
                         <a id="carousel-selector-6" data-slide-to="4" data-target="#myCarousel">
-                        <img src={product.img6} alt={product.name} class="img-fluid"/>
+                        <img src={product.img6} alt={product.name} class="img-fluid" style={{width:120, height:80}}/>
                         </a>
                     </li>
                 </ul>
+                <a class="carousel-control left pt-3" href="#myCarousel" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                    <a class="carousel-control right pt-3" href="#myCarousel" data-slide="next"><i class="fa fa-chevron-right"></i></a>
         </div>
     </div>
 

@@ -134,13 +134,17 @@ class App extends Component {
                 history={history} />
             }
             />
-            <Route exact path="/favorites" render={({ history }) =>
+            <Route exact path="/favorites" render={({ props }) =>
               <FavoritesPage
                 user={this.state.user}
                 favorites={this.state.favorites}
-                history={history} />
-            }
-            />
+                // history={history} 
+                {...props}
+                products={this.state.products}
+                handleSelectedProduct={this.handleSelectedProduct}
+                handleAddItem={this.handleAddItem}
+              />
+            }/>
             <Route exact path="/shop/:id" render={( props ) =>
               <DetailsPage 
                 {...props}
