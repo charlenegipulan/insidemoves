@@ -12,6 +12,7 @@ class ShopPage extends Component {
         this.state = {
             filterText: '',
             brandFilter: '',
+            categoryFilter: '',
             products: [],
             filteredProducts: []
         }
@@ -21,6 +22,13 @@ class ShopPage extends Component {
         this.setState({
             brandFilter: brand,
             filteredProducts: this.state.products.filter(p => p.brand.toLowerCase() === brand && p.name.toLowerCase().includes(this.state.filterText))
+        });
+    }
+
+    filterByCategory = (category) => {
+        this.setState({
+            categoryFilter: category,
+            filteredProducts: this.state.products.filter(p => p.category.toLowerCase() === category && p.name.toLowerCase().includes(this.state.filterText))
         });
     }
 
@@ -42,7 +50,9 @@ class ShopPage extends Component {
         return (
             <div className="ShopPage">
                 <div className="ShopPage-header">
-                    <NavBar2 />
+                    <NavBar2 
+                        filterByCategory={this.filterByCategory}
+                    />
                     <Header />
                 </div>
                 <div className="ShopPage-content">
