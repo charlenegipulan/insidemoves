@@ -23,7 +23,7 @@ const NavBar = (props) => {
             <div className="right-nav-content">
                 <div className="icons">
                     <Link to='/checkout' className='NavBar-link'><img src={'https://i.imgur.com/x0mEKHN.png'} alt="icon"></img></Link>&nbsp;
-                    <Link to='/shop' className='NavBar-link'><img src={'https://i.imgur.com/va5Co1O.png'} alt="icon"></img></Link> &nbsp;
+                    <Link to='/favorites' className='NavBar-link'><img src={'https://i.imgur.com/va5Co1O.png'} alt="icon"></img></Link> &nbsp;
                     <Link to='/login' className='NavBar-link'><img src={'https://i.imgur.com/sPPabG2.png'} alt="icon"></img></Link>&nbsp;
                 </div>
                 <div className="NavBar-login">

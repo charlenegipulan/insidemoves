@@ -1,7 +1,6 @@
 import React from 'react';
 import './Cart.css'
 import CartItems from '../CartItems/CartItems';
-import CheckoutPage from '../../pages/CheckoutPage/CheckoutPage';
 
 const Cart = (props) => {
     // let total = props.cart.items.reduce((tot, item) => tot + parseFloat(item.product.price * item.quantity, 0));
@@ -20,7 +19,9 @@ const Cart = (props) => {
                     <h4>Order Summary</h4>
                     <hr />
                     <p>Number of items: {itemCount} </p>
-                    <h3>Total: {total} </h3>
+                    <p> Subtotal: {total} </p>
+                    <p>Tax: 7.25%</p>
+                    <h3>Total:  ${parseFloat(total + (total * .0725)).toFixed(2)}</h3>
                     <button> Checkout </button>
                 </div>
         </section>

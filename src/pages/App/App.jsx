@@ -9,6 +9,7 @@ import {
 import LogInPage from '../LogInPage/LogInPage';
 import SignUpPage from '../SignUpPage/SignUpPage';
 import CheckoutPage from '../CheckoutPage/CheckoutPage';
+import FavoritesPage from '../FavoritesPage/FavoritesPage';
 import DetailsPage from '../DetailsPage/DetailsPage';
 import userService from '../../utils/userService';
 import NavBar from '../../components/NavBar/NavBar';
@@ -133,6 +134,13 @@ class App extends Component {
                 history={history} />
             }
             />
+            <Route exact path="/favorites" render={({ history }) =>
+              <FavoritesPage
+                user={this.state.user}
+                favorites={this.state.favorites}
+                history={history} />
+            }
+            />
             <Route exact path="/shop/:id" render={( props ) =>
               <DetailsPage 
                 {...props}
@@ -141,9 +149,6 @@ class App extends Component {
                 handleAddItemToFavorites={this.handleAddItemToFavorites}
                 />
             }/> 
-              {/* <SearchBar 
-                handleSearchResults={this.handleSearchResults}
-                /> */}
           </Switch>
           </React.Fragment>
       </div>
