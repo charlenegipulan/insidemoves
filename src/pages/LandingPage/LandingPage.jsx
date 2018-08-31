@@ -3,21 +3,27 @@ import './LandingPage.css';
 import ShopButton from '../../components/ShopButton/ShopButton'
 import LandingBanner from '../../components/LandingBanner/LandingBanner';
 
-const LandingPage = (props) => {
+class LandingPage extends React.Component{
     
-    return (
-        <div className="LandingPage">
-            <div className="LandingBanner-Panel">
-                <LandingBanner />
+    componentDidMount() {
+        this.props.handleClearFilter();
+    }
+
+    render() {
+        return (
+            <div className="LandingPage">
+                <div className="LandingBanner-Panel">
+                    <LandingBanner />
+                </div>
+                <div className="LandingPage-ShopButton">
+                        Discover the perfect pair 
+                        <br />
+                        <br />
+                    <ShopButton />
+                </div>
             </div>
-            <div className="LandingPage-ShopButton">
-                    Discover the perfect pair 
-                    <br />
-                    <br />
-                <ShopButton />
-            </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default LandingPage;

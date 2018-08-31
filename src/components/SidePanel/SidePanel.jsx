@@ -9,11 +9,11 @@ const SidePanel = (props) => {
             Find By:
             <hr/>
             Brand <br/>
-            &nbsp;&nbsp;&nbsp;<button className="brand-buttons" onClick={() => props.filterByBrand('nike')}> Nike </button><br/>
-            &nbsp;&nbsp;&nbsp;<button className="brand-buttons" onClick={() => props.filterByBrand('jordans')}> Jordans </button><br/>
-            &nbsp;&nbsp;&nbsp;<button className="brand-buttons" onClick={() => props.filterByBrand('yeezy')}> Yeezy </button><br/>
-            &nbsp;&nbsp;&nbsp;<button className="brand-buttons" onClick={() => props.filterByBrand('adidas')}> Adidas </button><br/>
-            &nbsp;&nbsp;&nbsp;<button className="brand-buttons" onClick={() => props.filterByBrand('vans')}> Vans </button><br/>
+            &nbsp;&nbsp;&nbsp;<button className="brand-buttons" onClick={() => props.handleUpdateFilterBrand('nike')}> Nike </button><br/>
+            &nbsp;&nbsp;&nbsp;<button className="brand-buttons" onClick={() => props.handleUpdateFilterBrand('jordans')}> Jordans </button><br/>
+            &nbsp;&nbsp;&nbsp;<button className="brand-buttons" onClick={() => props.handleUpdateFilterBrand('yeezy')}> Yeezy </button><br/>
+            &nbsp;&nbsp;&nbsp;<button className="brand-buttons" onClick={() => props.handleUpdateFilterBrand('adidas')}> Adidas </button><br/>
+            &nbsp;&nbsp;&nbsp;<button className="brand-buttons" onClick={() => props.handleUpdateFilterBrand('vans')}> Vans </button><br/>
             <br />
         </div>
     );

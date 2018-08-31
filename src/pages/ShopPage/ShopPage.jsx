@@ -11,18 +11,18 @@ class ShopPage extends Component {
         super(props);
         this.state = {
             filterText: '',
-            brandFilter: '',
+            // brandFilter: '',
             products: [],
             filteredProducts: []
         }
     }
 
-    filterByBrand = (brand) => {
-        this.setState({
-            brandFilter: brand,
-            filterCategory: ''
-        });
-    }
+    // filterByBrand = (brand) => {
+    //     this.setState({
+    //         brandFilter: brand,
+    //         filterCategory: ''
+    //     });
+    // }
 
     updateFilter = (e) => {
         var text = e.target.value.toLowerCase();
@@ -39,22 +39,23 @@ class ShopPage extends Component {
     
     render() {
         var filteredProducts = this.state.products;
-        if (this.state.brandFilter) filteredProducts = filteredProducts.filter(p => p.brand.toLowerCase() === this.state.brandFilter);
-        if (this.state.filterText) filteredProducts = filteredProducts.filter(p => p.name.toLowerCase().includes(this.state.filterText));
-        if (this.props.filterCategory) filteredProducts = filteredProducts.filter(p => p.category === this.props.filterCategory);
+            if (this.props.brandFilter) filteredProducts = filteredProducts.filter(p => p.brand.toLowerCase() === this.props.brandFilter);
+            if (this.state.filterText) filteredProducts = filteredProducts.filter(p => p.name.toLowerCase().includes(this.state.filterText));
+            if (this.props.filterCategory) filteredProducts = filteredProducts.filter(p => p.category === this.props.filterCategory);
         return (
             <div className="ShopPage">
                 <div className="ShopPage-header">
-                    <Header />
                     <NavBar2 
+                        products={this.state.filteredProducts}
                         handleUpdateFilterCategory={this.props.handleUpdateFilterCategory}
                     />
+                    <Header />
                 </div>
                 <div className="ShopPage-content">
                     <div className="ShopPage-SidePanel">
                         <SidePanel 
                             products={this.state.filteredProducts}
-                            filterByBrand={this.filterByBrand}
+                            handleUpdateFilterBrand={this.props.handleUpdateFilterBrand}
                         />
                     </div>
                     <div className="ShopPage-MainPanel">

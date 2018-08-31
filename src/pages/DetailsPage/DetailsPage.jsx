@@ -98,10 +98,17 @@ const DetailsPage = (props) => {
                 <p>{product.description}</p>
                 <p>{product.sku}</p>
                 <p>{product.price}</p>
-                {props.user ? <button onClick={() => props.handleAddItem(product._id)}> Add to Cart </button> : null}
-                {props.user ?<button onClick={() => props.handleAddItemToFavorites(product._id)}> Add To Favorites </button>: null}
+                {props.user ? 
+                    <button onClick={() => props.handleAddItem(product._id)}> Add to Cart </button> 
+                    : 
+                    // <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add to Cart</button>
+                }
+                {props.user ?
+                    <button onClick={() => props.handleAddItemToFavorites(product._id)}> Add To Favorites </button>
+                    :
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add to Favorites</button>
+                }
             </div> 
-
             </div>
             </React.Fragment>
     } else {
@@ -115,9 +122,27 @@ const DetailsPage = (props) => {
                     handleUpdateFilterCategory={props.handleUpdateFilterCategory}/>
                     <Header />
             </div>
-        {view}
+            {view}
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <div class="modal-body">
+                        Please log In
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Click to Log In</button>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
     );
-  }
+}
+
   
 export default DetailsPage;

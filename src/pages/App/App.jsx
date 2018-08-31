@@ -27,8 +27,10 @@ class App extends Component {
       cart: null,
       products: [],
       filterCategory: '',
+      brandFilter: '',
       results: [],
-      loading: true
+      loading: true,
+      selectedProduct: null
     };
   }
 
@@ -66,7 +68,28 @@ class App extends Component {
   }
 
   handleUpdateFilterCategory = (cat) => {
-    this.setState({filterCategory: cat}, function() {
+    this.setState({ 
+      brandFilter: '', 
+      filterCategory: cat, 
+    }, 
+    function() {
+      this.props.history.push(`/shop`);
+    });
+  }
+
+  handleClearFilter = () => {
+    this.setState({
+      brandFilter: '',
+      filterCategory: ''
+    })
+  }
+
+  handleUpdateFilterBrand = (brand) => {
+    this.setState({ 
+      brandFilter: brand, 
+      filterCategory: '', 
+    }, 
+    function() {
       this.props.history.push(`/shop`);
     });
   }
@@ -79,7 +102,6 @@ class App extends Component {
       this.setState({ user: userService.getUser() });
     })
   }
-
   /*---------- Lifecycle Methods ----------*/
   componentDidMount() {
     let user = userService.getUser();
@@ -108,6 +130,7 @@ class App extends Component {
               <Route exact path="/" render={() => 
                 <LandingPage  
                   user={this.state.user}
+                  handleClearFilter={this.handleClearFilter}
                 />
               } />
             <Route exact path="/shop" render={(props) =>
@@ -117,7 +140,10 @@ class App extends Component {
                 handleSelectedProduct={this.handleSelectedProduct}
                 handleAddItem={this.handleAddItem}
                 handleUpdateFilterCategory={this.handleUpdateFilterCategory}
+                handleUpdateFilterBrand={this.handleUpdateFilterBrand}
                 filterCategory={this.state.filterCategory}
+                brandFilter={this.state.brandFilter}
+                handleShowModal={this.handleShowModal}
               />
             } />
             <Route exact path="/login" render={(props) =>
