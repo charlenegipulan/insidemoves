@@ -44,7 +44,7 @@ function favoriteItem(productId) {
 
 function getFavorites() {
   var options = getAuthRequestOptions("GET");
-  return fetch(`${BASE_URL}${productId}/favorite`, options)
+  return fetch(`${BASE_URL}favorites`, options)
     .then(res => {
       if (res.ok) return res.json();
       throw new Error("Error adding a favorite item");
@@ -67,5 +67,6 @@ export default {
   index,
   addProduct,
   removeProduct,
-  favoriteItem
+  favoriteItem,
+  getFavorites
 };

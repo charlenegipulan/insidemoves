@@ -26,6 +26,7 @@ class App extends Component {
       favorites: [],
       cart: null,
       products: [],
+      filterCategory: '',
       results: [],
       loading: true
     };
@@ -62,6 +63,12 @@ class App extends Component {
 
   handleSelectedProduct = (product) => {
     this.props.history.push(`/shop/${product._id}`);
+  }
+
+  handleUpdateFilterCategory = (cat) => {
+    this.setState({filterCategory: cat}, function() {
+      this.props.history.push(`/shop`);
+    });
   }
 
   handleAddItemToFavorites = (productId) => {
@@ -109,6 +116,8 @@ class App extends Component {
                 products={this.state.products}
                 handleSelectedProduct={this.handleSelectedProduct}
                 handleAddItem={this.handleAddItem}
+                handleUpdateFilterCategory={this.handleUpdateFilterCategory}
+                filterCategory={this.state.filterCategory}
               />
             } />
             <Route exact path="/login" render={(props) =>
@@ -128,26 +137,27 @@ class App extends Component {
                 user={this.state.user}
                 cart={this.state.cart}
                 handleRemoveQuantity={this.handleRemoveQuantity}
+                handleUpdateFilterCategory={this.handleUpdateFilterCategory}
                 handleAddItem={this.handleAddItem}
-                 />
-            }
-            />
+              />
+            }/>
             <Route exact path="/payment" render={({ history }) =>
               <PaymentPage
                 user={this.state.user}
                 cart={this.state.cart}
+                handleUpdateFilterCategory={this.handleUpdateFilterCategory}
                 history={history} />
-            }
-            />
+            }/>
             <Route exact path="/favorites" render={({ props }) =>
               <FavoritesPage
+                {...props}
                 user={this.state.user}
                 favorites={this.state.favorites}
                 // history={history} 
-                {...props}
                 products={this.state.products}
                 handleSelectedProduct={this.handleSelectedProduct}
                 handleAddItem={this.handleAddItem}
+                handleUpdateFilterCategory={this.handleUpdateFilterCategory}
               />
             }/>
             <Route exact path="/shop/:id" render={( props ) =>
@@ -157,7 +167,8 @@ class App extends Component {
                 handleAddItem={this.handleAddItem}
                 products={this.state.products}
                 handleAddItemToFavorites={this.handleAddItemToFavorites}
-                />
+                handleUpdateFilterCategory={this.handleUpdateFilterCategory}
+              />
             }/> 
           </Switch>
           </React.Fragment>

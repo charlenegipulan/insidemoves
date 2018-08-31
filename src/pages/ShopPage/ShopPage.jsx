@@ -12,7 +12,6 @@ class ShopPage extends Component {
         this.state = {
             filterText: '',
             brandFilter: '',
-            categoryFilter: '',
             products: [],
             filteredProducts: []
         }
@@ -21,14 +20,11 @@ class ShopPage extends Component {
     filterByBrand = (brand) => {
         this.setState({
             brandFilter: brand,
-            filteredProducts: this.state.products.filter(p => p.brand.toLowerCase() === brand && p.name.toLowerCase().includes(this.state.filterText))
-        });
-    }
-
-    filterByCategory = (category) => {
-        this.setState({
-            categoryFilter: category,
-            filteredProducts: this.state.products.filter(p => p.category.toLowerCase() === category && p.name.toLowerCase().includes(this.state.filterText))
+            // filteredProducts: this.state.products.filter(
+            //     p => p.brand.toLowerCase() === brand &&
+            //     p.name.toLowerCase().includes(this.state.filterText) &&
+            //     p.category === this.props.categoryFilter
+            // )
         });
     }
 
@@ -36,22 +32,30 @@ class ShopPage extends Component {
         var text = e.target.value.toLowerCase();
         this.setState({
             filterText: text,
-            filteredProducts: text ? this.state.products.filter(p => p.name.toLowerCase().includes(text)) : this.state.products
+            // filteredProducts: this.state.products.filter(
+            //     p => p.brand.toLowerCase() === this.state.brandFilter &&
+            //     p.name.toLowerCase().includes(text) &&
+            //     p.category === this.props.categoryFilter
+            // )
         });
     }
-
+    
     componentDidMount() {
         productsAPI.index().then(products => {
             this.setState({products, filteredProducts: [...products]});
         });
     }
-
+    
     render() {
+        var filteredProducts = this.state.products;
+        if (this.state.brandFilter) filteredProducts = filteredProducts.filter(p => p.brand.toLowerCase() === this.state.brandFilter);
+        if (this.state.filterText) filteredProducts = filteredProducts.filter(p => p.name.toLowerCase().includes(this.state.filterText));
+        if (this.props.filterCategory) filteredProducts = filteredProducts.filter(p => p.category === this.props.filterCategory);
         return (
             <div className="ShopPage">
                 <div className="ShopPage-header">
                     <NavBar2 
-                        filterByCategory={this.filterByCategory}
+                        handleUpdateFilterCategory={this.props.handleUpdateFilterCategory}
                     />
                     <Header />
                 </div>
@@ -68,7 +72,7 @@ class ShopPage extends Component {
                         </div>
                         <div className="ShopPage-ProductList">
                         <ProductList 
-                            products={this.state.filteredProducts}
+                            products={filteredProducts}
                             handleAddItem={this.props.handleAddItem}
                             handleSelectedProduct={this.props.handleSelectedProduct}
                         />

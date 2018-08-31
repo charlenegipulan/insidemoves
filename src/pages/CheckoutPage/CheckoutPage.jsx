@@ -16,6 +16,7 @@ const CheckoutPage = (props) => {
                         cart={props.cart}
                         handleRemoveQuantity={props.handleRemoveQuantity}
                         handleAddItem={props.handleAddItem}
+                        handleUpdateFilterCategory={props.handleUpdateFilterCategory}
                     />
                 }
             </div>

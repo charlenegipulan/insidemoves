@@ -8,7 +8,7 @@ function getCart() {
       if (res.ok) return res.json();
       throw new Error("Bad Credentials");
     })
-    .then(products => products);
+    .then(cart => cart);
 }
 
 /*--- Helper Functions ----*/

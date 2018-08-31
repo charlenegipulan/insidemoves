@@ -28,7 +28,7 @@ function removeProduct(req, res) {
 
 function addFavorite(req, res) {
     User.findById(req.user._id, function(err, user) {
-        user.favorites.push(req.params.id);
+        if (!user.favorites.some(f => f.equals(req.params.id))) user.favorites.push(req.params.id);
         user.save(function() {
             var token = createJWT(user);
             res.json(token);
@@ -37,7 +37,10 @@ function addFavorite(req, res) {
 }
 
 function getAllFavorites(req, res) {
-    Product.find({_id: req.user.favorites})
+    Product.find({_id: req.user.favorites}, function(err, favorites) {
+        if(err) return res.status(400).json(err);
+        res.json(favorites); 
+    });
 }
 
 module.exports = {

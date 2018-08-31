@@ -7,21 +7,24 @@ class FavoritesPage extends React.Component {
     constructor() {
         super()
         this.state = {
-
+            favorites: []
         }
     }
 
-    // componentDidMount() {
-    //     productsAPI.getFavorites().then(products => {
-    //         this.setState({products, filteredProducts: [...products]});
-    //     });
-    // }
+    componentDidMount() {
+        productsAPI.getFavorites().then(favorites => {
+            this.setState({ favorites });
+        });
+    }
 
     render() {
     return (
         <div className="FavoritesPage">
-            <NavBar2 />
+            <NavBar2 
+                handleUpdateFilterCategory={this.props.handleUpdateFilterCategory}
+            />
             <Header />
+            {this.state.favorites.map(f => <div>{f.name}</div>)}
         </div>
     )
     }

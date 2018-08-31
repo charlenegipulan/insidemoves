@@ -117,7 +117,8 @@ const DetailsPage = (props) => {
     return (
         <div className="DetailsPage">
             <div className="ShopPage-header">
-                    <NavBar2 />
+                    <NavBar2 
+                    handleUpdateFilterCategory={props.handleUpdateFilterCategory}/>
                     <Header />
             </div>
         {view}
