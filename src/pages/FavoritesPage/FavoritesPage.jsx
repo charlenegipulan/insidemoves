@@ -5,8 +5,8 @@ import productsAPI from '../../utils/productsAPI';
 import './FavoritesPage.css';
 
 class FavoritesPage extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             favorites: []
         }

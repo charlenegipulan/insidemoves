@@ -26,22 +26,21 @@ class LoginForm extends Component {
         this.props.handleLogin();
         this.props.history.push('/');
       })
-      // invalid credentials - don't alert in YOUR app :)
       .catch(err => alert('Invalid Credentials!'));
   }
 
   render() {
     return (
       <div className="LogInForm">
-        <header className="header-footer">Enter Email and Password</header>
+        <h2 className="header-footer">Enter Email and Password</h2>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
           <div className="form-group">
-            <div className="col-sm-12">
+            <div className="col-lg-8 text-center">
               <input type="email" className="form-control" placeholder="Email" value={this.state.email} onChange={(e) => this.handleChange('email', e)} />
             </div>
           </div>
           <div className="form-group">
-            <div className="col-sm-12">
+            <div className="col-lg-8 text-center">
               <input type="password" className="form-control" placeholder="Password" value={this.state.pw} onChange={(e) => this.handleChange('pw', e)} />
             </div>
           </div>

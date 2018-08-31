@@ -150,12 +150,20 @@ class App extends Component {
             <Route exact path="/login" render={(props) =>
               <LogInPage 
               {...props}
-              handleLogin={this.handleLogin}/>
+              handleLogin={this.handleLogin}
+              handleUpdateFilterCategory={this.handleUpdateFilterCategory}
+              handleUpdateFilterBrand={this.handleUpdateFilterBrand}
+              filterCategory={this.state.filterCategory}
+              brandFilter={this.state.brandFilter}/>
             } />
             <Route exact path="/signup" render={(props) =>
               <SignUpPage 
                 {...props}
-                handleSignup={this.handleSignup}/>
+                handleSignup={this.handleSignup}
+                handleUpdateFilterCategory={this.handleUpdateFilterCategory}
+                handleUpdateFilterBrand={this.handleUpdateFilterBrand}
+                filterCategory={this.state.filterCategory}
+                brandFilter={this.state.brandFilter}/>
             } 
             />
             <Route exact path="/checkout" render={( props ) => (
@@ -166,19 +174,25 @@ class App extends Component {
                 cart={this.state.cart}
                 handleRemoveQuantity={this.handleRemoveQuantity}
                 handleUpdateFilterCategory={this.handleUpdateFilterCategory}
+                handleUpdateFilterBrand={this.handleUpdateFilterBrand}
+                filterCategory={this.state.filterCategory}
+                brandFilter={this.state.brandFilter}
                 handleAddItem={this.handleAddItem}
-                />
-                :
-                <Redirect to={{pathname: '/login', message: "Please log in"}} />
-              )
-            }/>
-            <Route exact path="/payment" render={({ history }) =>
+              />
+              :
+              <Redirect to={{pathname: '/login', message: "Please log in to see your cart"}} />
+              
+            )}/>
+            <Route exact path="/payment" render={({ props }) => (
+              userService.getUser() ?
               <PaymentPage
                 user={this.state.user}
                 cart={this.state.cart}
                 handleUpdateFilterCategory={this.handleUpdateFilterCategory}
-                history={history} />
-            }/>
+                />
+                :
+                <Redirect to={{pathname: '/login', message: "Unauthorized user"}} />
+            )}/>
             <Route exact path="/favorites" render={({ props }) => (
               userService.getUser() ?
               <FavoritesPage
@@ -192,7 +206,7 @@ class App extends Component {
                 handleUpdateFilterCategory={this.handleUpdateFilterCategory}
               />
               :
-              <Redirect to={{pathname: "/favorites", message: "Please log in"}} />
+              <Redirect to={{pathname: "/login", message: "Please log in to view your favorites"}} />
             )
             }/>
             <Route exact path="/shop/:id" render={( props ) =>

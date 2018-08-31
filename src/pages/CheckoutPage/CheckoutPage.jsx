@@ -8,7 +8,10 @@ const CheckoutPage = (props) => {
     return (
         
         <div className="CheckoutPage">
-        <NavBar2 />
+        <NavBar2 
+            products={props.filteredProducts}
+            handleUpdateFilterCategory={props.handleUpdateFilterCategory}
+        />
         <Header />
             <div className="CheckoutPage-cart">
                 {props.cart && 

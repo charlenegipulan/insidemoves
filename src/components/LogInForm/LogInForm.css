@@ -1,8 +1,3 @@
-.header-footer {
-    margin-top: 20px;
-    text-align: center;
-}
-
 .LogInForm a {
     color: white;
     background-color: #EF5656;
@@ -15,6 +10,15 @@
     background-color: white;
 }
 
-.LogInForm input {
+.LogInForm form {
     width: 50%;
+}
+
+.LogInForm {
+    background-color: #F7F6F5;
+    margin: 0 auto;
+}
+
+.form-group {
+
 }

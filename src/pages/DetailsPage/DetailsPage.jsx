@@ -118,7 +118,7 @@ const DetailsPage = (props) => {
                         Please log In
                         </div>
                         <div class="modal-footer">
-                        <Link to='/login'>Click to Log In</Link>
+                        <button type="button" id="close" class="btn btn-danger" onClick={() => props.history.push('/login')} data-dismiss="modal" aria-label="Close">Log-In</button>
                         </div>
                     </div>
                 </div>

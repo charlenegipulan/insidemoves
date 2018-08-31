@@ -11,22 +11,18 @@ class ShopPage extends Component {
         super(props);
         this.state = {
             filterText: '',
-            // brandFilter: '',
+            brandFilter: '',
+            filterCategory: '',
             products: [],
             filteredProducts: []
         }
     }
 
-    // filterByBrand = (brand) => {
-    //     this.setState({
-    //         brandFilter: brand,
-    //         filterCategory: ''
-    //     });
-    // }
-
     updateFilter = (e) => {
         var text = e.target.value.toLowerCase();
         this.setState({
+            brandFilter: '',
+            filterCategory: '',
             filterText: text,
         });
     }

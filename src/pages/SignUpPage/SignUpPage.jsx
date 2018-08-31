@@ -16,7 +16,8 @@ class SignupPage extends Component {
   render() {
     return (
       <div className='SignUpPage'>
-        <NavBar2 />
+        <NavBar2 
+        handleUpdateFilterCategory={this.props.handleUpdateFilterCategory}/>
         <Header />
         <SignUpForm
           {...this.props}

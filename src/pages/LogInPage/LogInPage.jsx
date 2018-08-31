@@ -7,7 +7,8 @@ const LogInPage = (props) => {
     return (
         <div className="LogInPage">
             <div>
-                <NavBar2 />
+                <NavBar2 
+                    handleUpdateFilterCategory={props.handleUpdateFilterCategory}/>
                 <Header />
                     <h3 className="LoginPageMessage">{props.location.message}</h3>
                 <LoginForm 
