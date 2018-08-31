@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../components/Header/Header'
 import NavBar2 from '../../components/NavBar2/NavBar2'
 import productsAPI from '../../utils/productsAPI';
+import './FavoritesPage.css';
 
 class FavoritesPage extends React.Component {
     constructor() {
@@ -20,11 +21,13 @@ class FavoritesPage extends React.Component {
     render() {
     return (
         <div className="FavoritesPage">
+            <Header />
             <NavBar2 
                 handleUpdateFilterCategory={this.props.handleUpdateFilterCategory}
             />
-            <Header />
-            {this.state.favorites.map(f => <div>{f.name}</div>)}
+            <h3> Your favorite items:</h3>
+            <hr></hr>
+            {this.state.favorites.map(f => <div className="favorite-items"><img src={f.img} /> {f.name}</div>)}
         </div>
     )
     }
@@ -32,9 +35,3 @@ class FavoritesPage extends React.Component {
 
 export default FavoritesPage;
 
-// make a productsAPI.getFavorites() from within componentDidMount
-// add a server route
-// add the controller method/action
-// in the controller action, query Product.find({_id: req.user.favorites})
-// return those babies
-// put those babies on state

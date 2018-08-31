@@ -20,11 +20,7 @@ class ShopPage extends Component {
     filterByBrand = (brand) => {
         this.setState({
             brandFilter: brand,
-            // filteredProducts: this.state.products.filter(
-            //     p => p.brand.toLowerCase() === brand &&
-            //     p.name.toLowerCase().includes(this.state.filterText) &&
-            //     p.category === this.props.categoryFilter
-            // )
+            filterCategory: ''
         });
     }
 
@@ -32,11 +28,6 @@ class ShopPage extends Component {
         var text = e.target.value.toLowerCase();
         this.setState({
             filterText: text,
-            // filteredProducts: this.state.products.filter(
-            //     p => p.brand.toLowerCase() === this.state.brandFilter &&
-            //     p.name.toLowerCase().includes(text) &&
-            //     p.category === this.props.categoryFilter
-            // )
         });
     }
     
@@ -54,10 +45,10 @@ class ShopPage extends Component {
         return (
             <div className="ShopPage">
                 <div className="ShopPage-header">
+                    <Header />
                     <NavBar2 
                         handleUpdateFilterCategory={this.props.handleUpdateFilterCategory}
                     />
-                    <Header />
                 </div>
                 <div className="ShopPage-content">
                     <div className="ShopPage-SidePanel">

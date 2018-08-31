@@ -1,0 +1,11 @@
+.FavoritesPage {
+    margin: 0 auto; 
+}
+.FavoritesPage img {
+    width: 20vw;
+}
+
+.favorite-items {
+    display: inline;
+    margin: 20px;
+}

@@ -91,8 +91,6 @@ const DetailsPage = (props) => {
     </div>
 
 </div>
-{/* <!--/main slider carousel--> */}
-{/* </div> */}
             </div>
             <div className="DetailsPage-product-detail">
                 <h1>{product.name}</h1>
@@ -102,11 +100,7 @@ const DetailsPage = (props) => {
                 <p>{product.price}</p>
                 {props.user ? <button onClick={() => props.handleAddItem(product._id)}> Add to Cart </button> : null}
                 {props.user ?<button onClick={() => props.handleAddItemToFavorites(product._id)}> Add To Favorites </button>: null}
-                {/* {props.user ? <button onClick={() => props.handleAddItem(product._id)}> Add to Cart </button> : null}
-                {props.user ?<button onClick={() => props.handleAddItemToFavorites(product._id)}> Add To Favorites </button>: null} */}
             </div> 
-
-
 
             </div>
             </React.Fragment>
