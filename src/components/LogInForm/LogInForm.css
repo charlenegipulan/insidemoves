@@ -14,3 +14,7 @@
     color: #EF5656;
     background-color: white;
 }
+
+.LogInForm input {
+    width: 50%;
+}

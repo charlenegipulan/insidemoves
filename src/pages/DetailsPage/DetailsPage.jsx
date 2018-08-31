@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar2 from '../../components/NavBar2/NavBar2';
 import Header from '../../components/Header/Header';
 import './DetailsPage.css';
+import {Link} from 'react-router-dom';
 
 const DetailsPage = (props) => {
     var product = props.products && props.products.find(p => p._id === props.match.params.id);
@@ -10,20 +11,6 @@ const DetailsPage = (props) => {
         view = <React.Fragment>
             <div className="DetailsPage-content">
             <div className="DetailsPage-images">
-                {/* <div>
-                    <img src={product.img} alt={product.name} style={{width:450, height:300}}/>
-                </div>
-                <div>
-                    <img src={product.img2} style={{width:120, height:80}} alt={product.name}/>
-                    <img src={product.img3} style={{width:120, height:80}} alt={product.name}/>
-                    <img src={product.img4} style={{width:120, height:80}} alt={product.name}/>
-                    <img src={product.img5} style={{width:120, height:80}} alt={product.name}/>
-                    <img src={product.img6} style={{width:120, height:80}} alt={product.name}/>
-                </div> */}
-
-                                {/* <div class="container"> */}
-
-{/* <!-- main slider carousel --> */}
 <div class="row">
     <div id="slider">
             <div id="myCarousel" class="carousel slide">
@@ -54,11 +41,7 @@ const DetailsPage = (props) => {
                 {/* <!-- main slider carousel nav controls --> */}
 
                 <ul class="carousel-indicators list-inline">
-                    {/* <li class="list-inline-item active">
-                        <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#myCarousel">
-                        <img src={product.img} alt={product.name} class="img-fluid"/>
-                        </a>
-                    </li> */}
+
                     <li class="list-inline-item">
                         <a id="carousel-selector-1" data-slide-to="1" data-target="#myCarousel">
                         <img src={product.img2} alt={product.name} class="img-fluid" style={{width:120, height:80}}/>
@@ -101,7 +84,7 @@ const DetailsPage = (props) => {
                 {props.user ? 
                     <button onClick={() => props.handleAddItem(product._id)}> Add to Cart </button> 
                     : 
-                    // <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add to Cart</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add to Cart</button>
                 }
                 {props.user ?
                     <button onClick={() => props.handleAddItemToFavorites(product._id)}> Add To Favorites </button>
@@ -131,16 +114,16 @@ const DetailsPage = (props) => {
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                    <div class="modal-body">
+                        <div class="modal-body">
                         Please log In
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Click to Log In</button>
+                        </div>
+                        <div class="modal-footer">
+                        <Link to='/login'>Click to Log In</Link>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     );
 }
 

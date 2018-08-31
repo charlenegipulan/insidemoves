@@ -4,6 +4,7 @@ import LandingPage from '../LandingPage/LandingPage';
 import ShopPage from '../ShopPage/ShopPage';
 import {
   Switch,
+  Redirect,
   Route,
 } from 'react-router-dom'
 import LogInPage from '../LogInPage/LogInPage';
@@ -157,7 +158,8 @@ class App extends Component {
                 handleSignup={this.handleSignup}/>
             } 
             />
-            <Route exact path="/checkout" render={( props ) =>
+            <Route exact path="/checkout" render={( props ) => (
+              userService.getUser() ?
               <CheckoutPage
                 {...props}
                 user={this.state.user}
@@ -165,7 +167,10 @@ class App extends Component {
                 handleRemoveQuantity={this.handleRemoveQuantity}
                 handleUpdateFilterCategory={this.handleUpdateFilterCategory}
                 handleAddItem={this.handleAddItem}
-              />
+                />
+                :
+                <Redirect to={{pathname: '/login', message: "Please log in"}} />
+              )
             }/>
             <Route exact path="/payment" render={({ history }) =>
               <PaymentPage
@@ -174,7 +179,8 @@ class App extends Component {
                 handleUpdateFilterCategory={this.handleUpdateFilterCategory}
                 history={history} />
             }/>
-            <Route exact path="/favorites" render={({ props }) =>
+            <Route exact path="/favorites" render={({ props }) => (
+              userService.getUser() ?
               <FavoritesPage
                 {...props}
                 user={this.state.user}
@@ -185,6 +191,9 @@ class App extends Component {
                 handleAddItem={this.handleAddItem}
                 handleUpdateFilterCategory={this.handleUpdateFilterCategory}
               />
+              :
+              <Redirect to={{pathname: "/favorites", message: "Please log in"}} />
+            )
             }/>
             <Route exact path="/shop/:id" render={( props ) =>
               <DetailsPage 
