@@ -9,7 +9,7 @@
 
 .CartItem button {
     width: 50px;
-    height: 30px;
+    height: 20px;
     background: white;
     color: black;
     border: 2px solid black;
@@ -30,7 +30,6 @@
     width: 1%;
     vertical-align: middle;
     display: table-cell;
-    margin-left: 1px;
 }
   
 .input-group-vertical > .btn {
@@ -39,7 +38,6 @@ float: none;
 width: 100%;
 max-width: 100%;
 padding: 8px;
-margin-left: -1px;
 position: relative;
 border-radius: 0;
 }
@@ -62,4 +60,8 @@ left: 4px;
 .InputSpinner {
 display: flex;
 width: 38px;
+}
+
+.form-control {
+    margin-top: 15px;
 }
