@@ -25,6 +25,10 @@
     margin-top: 30px;
 }
 
+.ShopPage input:focus {
+    outline: none;
+}
+
 .ShopPage-content {
     display: flex;
     flex-direction: row;

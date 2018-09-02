@@ -17,6 +17,10 @@
     font-size: 10px;
 }
 
+.brand-buttons:focus {
+    outline: none;
+}
+
 .brand-buttons:hover {
     cursor: pointer;
     color: red;

@@ -12,7 +12,7 @@
 
 .DetailsPage-images {
     width: 50%;
-    margin-left: 30px;
+    text-align: right;
 }
 
 .DetailsPage-product-detail {
@@ -38,15 +38,18 @@
     border: 2px solid black;
 }
 
+.DetailsPage-product-detail button:focus {
+    outline: none;
+}
+
 #myCarousel .list-inline {
     white-space:nowrap;
 }
 
 #myCarousel .carousel-indicators {
     position: static;
-    left: initial;
     width: initial;
-    margin-left: initial;
+    margin-right: auto;
 }
 
 #myCarousel .carousel-indicators > li {
@@ -57,4 +60,8 @@
 
 #myCarousel .carousel-indicators > li.active img {
     opacity: 0.7;
+}
+
+.carousel-arrows {
+    text-align: center;
 }

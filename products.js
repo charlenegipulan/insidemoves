@@ -183,7 +183,7 @@ const products = [
         "img5": "https://i.imgur.com/EQV6hTT.png",
         "img6": "https://i.imgur.com/QwZY8LA.png"
     }, {
-        "sku": "WH-J5V5",
+        "sku": "OP-J5V5",
         "name": "Chicago Bulls Scottie Pippen Mitchell & Ness Black",
         "category": "jerseys",
         "brand": "Swingman",
@@ -195,6 +195,45 @@ const products = [
         "img4": "https://i.imgur.com/5XI1FqQ.png",
         "img5": "https://i.imgur.com/5XI1FqQ.png",
         "img6": "https://i.imgur.com/5XI1FqQ.png"
+    }, {
+        "sku": "WH-81V5",
+        "name": "Los Angeles Lakers LeBron James Fanatics Branded Gold",
+        "category": "jerseys",
+        "brand": "Swingman",
+        "price": "79.99",
+        "description": "Fast Break Replica Jersey - Icon Edition",
+        "img": "https://i.imgur.com/7XKaJZY.png",
+        "img2": "https://i.imgur.com/HSn09qk.png",
+        "img3": "https://i.imgur.com/HSn09qk.pngg",
+        "img4": "https://i.imgur.com/qGnobdM.png",
+        "img5": "https://i.imgur.com/HSn09qk.png",
+        "img6": "https://i.imgur.com/qGnobdM.png"
+    }, {
+        "sku": "WH-JW85",
+        "name": "Boston Celtics Kyrie Irving",
+        "category": "jerseys",
+        "brand": "Swingman",
+        "price": "125.99",
+        "description": "Jersey Statement Edition",
+        "img": "https://i.imgur.com/QnUr5Hz.png",
+        "img2": "https://i.imgur.com/XZ1h8L0.png",
+        "img3": "https://i.imgur.com/BhWT1MP.png",
+        "img4": "https://i.imgur.com/XZ1h8L0.png",
+        "img5": "https://i.imgur.com/BhWT1MP.png",
+        "img6": "https://i.imgur.com/BhWT1MP.png"
+    }, {
+        "sku": "WH-6JV5",
+        "name": "Golden State Warriors Stephen Curry",
+        "category": "jerseys",
+        "brand": "Swingman",
+        "price": "125.99",
+        "description": "Swingman Jersey Statement Edition",
+        "img": "https://i.imgur.com/gIGUTA8.png",
+        "img2": "https://i.imgur.com/sSdaHwE.png",
+        "img3": "https://i.imgur.com/kFN97fF.png",
+        "img4": "https://i.imgur.com/sSdaHwE.png",
+        "img5": "https://i.imgur.com/kFN97fF.png",
+        "img6": "https://i.imgur.com/gIGUTA8.png"
     }]
 
 module.exports = products;

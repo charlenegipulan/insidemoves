@@ -12,10 +12,6 @@ const Product = (props) => {
                     <h5> {props.product.name} </h5> <span class="shoe-desc">{props.product.description}</span>
                    <span class="price-text"> $&nbsp;{props.product.price} </span>
                 </div>
-                <div>
-                    {/* <span>{props.product.sku}</span> */}
-                    {/* <button onClick={() => props.handleAddItem(props.product._id)} >ADD TO CART</button> */}
-                </div>
             </article>
             </Link>
         </div>

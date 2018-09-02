@@ -145,6 +145,7 @@ class App extends Component {
                 filterCategory={this.state.filterCategory}
                 brandFilter={this.state.brandFilter}
                 handleShowModal={this.handleShowModal}
+                handleClearFilter={this.handleClearFilter}
               />
             } />
             <Route exact path="/login" render={(props) =>

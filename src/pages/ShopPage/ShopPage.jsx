@@ -52,6 +52,9 @@ class ShopPage extends Component {
                         <SidePanel 
                             products={this.state.filteredProducts}
                             handleUpdateFilterBrand={this.props.handleUpdateFilterBrand}
+                            handleClearFilter={this.props.handleClearFilter}
+                            filteredProducts={this.state.filteredProducts}
+                            brandFilter={this.state.brandFilter}
                         />
                     </div>
                     <div className="ShopPage-MainPanel">

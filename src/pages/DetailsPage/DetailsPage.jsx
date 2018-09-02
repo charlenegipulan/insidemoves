@@ -68,8 +68,10 @@ const DetailsPage = (props) => {
                         </a>
                     </li>
                 </ul>
-                <a class="carousel-control left pt-3" href="#myCarousel" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-                    <a class="carousel-control right pt-3" href="#myCarousel" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+                <div className="carousel-arrows">
+                <a class="carousel-control left pt-3" href="#myCarousel" data-slide="prev"><i class="fa fa-chevron-left"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="carousel-control right pt-3" href="#myCarousel" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+                </div>
         </div>
     </div>
 
