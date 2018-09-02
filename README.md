@@ -1,4 +1,5 @@
 # Inside Moves
+An e-commerce storefront site for rare, collectible sneakers and jerseys. Built with MERN stack.
 
 ## Screenshots
 
