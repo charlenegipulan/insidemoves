@@ -35,12 +35,12 @@ class LoginForm extends Component {
         <form onSubmit={this.handleSubmit} >
         <h4 className="header-footer">Enter Email and Password</h4>
           <div className="form-group">
-            <div className="col-lg-8">
+            <div>
               <input type="email" className="form-control" placeholder="Email" value={this.state.email} onChange={(e) => this.handleChange('email', e)} />
             </div>
           </div>
           <div className="form-group">
-            <div className="col-lg-8">
+            <div>
               <input type="password" className="form-control" placeholder="Password" value={this.state.pw} onChange={(e) => this.handleChange('pw', e)} />
             </div>
           </div>

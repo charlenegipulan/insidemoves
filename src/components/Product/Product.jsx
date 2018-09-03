@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Product = (props) => {
     return(
-        <div>
+        <div className="Product">
             <Link to ={`/shop/${props.product._id}`} > 
             <article className="Product" onClick={() => props.handleSelectedProduct(props.product)}>
             <img src={props.product.img} alt={props.product.name} />

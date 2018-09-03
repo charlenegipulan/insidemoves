@@ -21,10 +21,10 @@ class FavoritesPage extends React.Component {
     render() {
     return (
         <div className="FavoritesPage">
-            <Header />
             <NavBar2 
                 handleUpdateFilterCategory={this.props.handleUpdateFilterCategory}
             />
+            <Header />
             <h3> Your favorite items:</h3>
             <hr></hr>
             {this.state.favorites.map(f => <div className="favorite-items"><img src={f.img} /> {f.name}</div>)}

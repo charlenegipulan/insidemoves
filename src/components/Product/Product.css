@@ -28,6 +28,10 @@
     color: white;
 }
 
+.Product a:hover {
+    text-decoration: none;
+}
+
 .Product > div {
     display: flex;
     flex-direction: column;
