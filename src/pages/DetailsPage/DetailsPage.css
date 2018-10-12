@@ -1,25 +1,33 @@
-.DetailsPage {
+/* .DetailsPage {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
+} */
 
 .DetailsPage-content {
     display: flex;
     flex-direction: row;
-    margin-top: 50px;
+    margin: 5vh 12vw;
 }
 
 .DetailsPage-images {
     width: 50%;
     text-align: right;
+    margin-top: 10vh;
 }
 
 .DetailsPage-product-detail {
     margin: 0 auto;
-    margin-left: 10px;
-    padding-top: 20px;
+    margin-left: 5vw;
+    margin-top:10vh;
     width: 50%;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #D5D1D1;
+    padding-top: 5vh;
+}
+
+.DetailsPage-product-detail h5 {
+    color: red;
 }
 
 .DetailsPage-product-detail button {

@@ -15,22 +15,22 @@ const DetailsPage = (props) => {
                         <div id="myCarousel" class="carousel slide">
                             <div class="carousel-inner">
                                 <div class="active item carousel-item" data-slide-number="0">
-                                    <img src={product.img} alt={product.name} class="img-fluid" style={{width:450, height:300}}/>
+                                    <img src={product.img} alt={product.name} class="img-fluid" style={{width:470, height:300}}/>
                                 </div>
                                 <div class="item carousel-item" data-slide-number="1">
-                                    <img src={product.img2} alt={product.name} class="img-fluid" style={{width:450, height:300}}/>
+                                    <img src={product.img2} alt={product.name} class="img-fluid" style={{width:470, height:300}}/>
                                 </div>
                                 <div class="item carousel-item" data-slide-number="2">
-                                    <img src={product.img3} alt={product.name} class="img-fluid" style={{width:450, height:300}}/>
+                                    <img src={product.img3} alt={product.name} class="img-fluid" style={{width:470, height:300}}/>
                                 </div>
                                 <div class="item carousel-item" data-slide-number="3">
-                                    <img src={product.img4} alt={product.name} class="img-fluid" style={{width:450, height:300}}/>
+                                    <img src={product.img4} alt={product.name} class="img-fluid" style={{width:470, height:300}}/>
                                 </div>
                                 <div class="item carousel-item" data-slide-number="4">
-                                    <img src={product.img5} alt={product.name} class="img-fluid" style={{width:450, height:300}}/>
+                                    <img src={product.img5} alt={product.name} class="img-fluid" style={{width:470, height:300}}/>
                                 </div>
-                                    <div class="item carousel-item" data-slide-number="5">
-                                <img src={product.img6} alt={product.name} class="img-fluid" style={{width:450, height:300}}/>
+                                <div class="item carousel-item" data-slide-number="5">
+                                    <img src={product.img6} alt={product.name} class="img-fluid" style={{width:470, height:300}}/>
                                 </div>
                             </div>
 
@@ -55,16 +55,7 @@ const DetailsPage = (props) => {
                                     <img src={product.img5} alt={product.name} class="img-fluid" style={{width:120, height:80}}/>
                                 </a>
                             </li>
-                            <li class="list-inline-item">
-                                <a id="carousel-selector-6" data-slide-to="4" data-target="#myCarousel">
-                                    <img src={product.img6} alt={product.name} class="img-fluid" style={{width:120, height:80}}/>
-                                </a>
-                            </li>
                         </ul>
-                        <div className="carousel-arrows">
-                            <a class="carousel-control left pt-3" href="#myCarousel" data-slide="prev"><i class="fa fa-chevron-left"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;
-                            <a class="carousel-control right pt-3" href="#myCarousel" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-                        </div>
                     </div>
                 </div>
 
@@ -74,7 +65,7 @@ const DetailsPage = (props) => {
         <div className="DetailsPage-product-detail">
             <h1>{product.name}</h1>
             <hr/>
-            <p>{product.description}</p>
+            <h5>{product.description}</h5>
             <p>{product.sku}</p>
             <p>{product.price}</p>
             {props.user ? 
